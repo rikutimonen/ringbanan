@@ -8,16 +8,16 @@ body {
 	background-color: #C2C4C0;
 }
 
-.tummansininen {
+.dark-gray {
 	background-color: #282929;
 }
 
-.punainen {
+.orange {
 	background-color: #D16500;
 }
 
-.sininen {
-	background-color: rgb(53,152,219);
+.blue {
+	background-color: #068cb8;
 }
 
 #sivu {
@@ -89,7 +89,6 @@ body {
 }
 
 .banner {
-
 	top: 40px;
 	margin-bottom: 0px;
 }
@@ -99,6 +98,7 @@ body {
 	top: 40px;
 }
 .banner-carousel{
+
 	position: absolute;
 	opacity: 0.9;
 	top: 100px;

@@ -24,7 +24,7 @@
 				</div>				
 			</div>
 				
-			<div class="audio-player tummansininen">
+			<div class="audio-player dark-gray">
 				
 				<button id="pButton" class="play" onclick="fadeIn(); playAudio();"></button>
 				<audio id="music">
@@ -93,7 +93,7 @@
 					<section class="tuote">
 							<h2>Otsikko</h2>
 							<p>Suomessa tai bataattia sipseiksi eurooppalaisissa opiskelijaruokalan potaatti syövät maa-aineksen kuitenkin sitä perunaa kielissä sialla. Oltava karjalassa kielessä kaljaviestijoukkueen eli tai omena sisältä eurooppalaisissa andeilla koossa</p>	
-						<div id="checkout"><a href="#" class="punainen button">Lue lisää</a></div>
+						<div id="checkout"><a href="#" class="orange button">Read more</a></div>
 						</article>
 					</section>
 				</div>
@@ -110,16 +110,16 @@
 					<section class ="instagram-feed">
 					<article>
 						<h2>Instagram</h2>
-						<script src="http://snapwidget.com/js/snapwidget.js"></script>
-						<iframe src="http://snapwidget.com/in/?h=bXJiYWRnZXJ8aW58MTI1fDN8M3x8bm98NXxmYWRlT3V0fG9uU3RhcnR8eWVzfHllcw==&ve=051015" title="Instagram Widget" 
-						class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>	
+						<p>#badgerbadger</p>
+						<!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/ebc9fb6653ea5ad670f6801acceb66d79f9b8cb9.html" 
+						id="instansive_ebc9fb6653" name="instansive_ebc9fb6653"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
 					</section>
 					</article>
 				</div>
 		
 			
 			
-				<footer class = "tummansininen">
+				<footer class = "dark-gray">
 					<p>footer</p>
 				</footer>
 			</div>
