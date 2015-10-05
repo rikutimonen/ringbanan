@@ -1,7 +1,4 @@
 <?php include("includes/iheader.php"); ?>
-
-
-			
 			<div class="banner">
 				<div id ="bannerFaded">
 					<img src ="assets/img/banner.png" alt="Banneri">
@@ -104,17 +101,20 @@
 				<div class="social-feeds">
 					<section class ="facebook-feed">
 						<article>
-							<h2>Social media</h2>
+							<h2>Facebook</h2>
 							<div class="fb-page" data-href="https://www.facebook.com/badgercore" data-small-header="true" data-adapt-container-width="true" 
 							data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore">
 							<blockquote cite="https://www.facebook.com/badgercore"><a href="https://www.facebook.com/badgercore">Mr.Badger</a></blockquote></div></div>				
 						</article>
 					</section>
 					<section class ="instagram-feed">
+					<article>
+						<h2>Instagram</h2>
 						<script src="http://snapwidget.com/js/snapwidget.js"></script>
 						<iframe src="http://snapwidget.com/in/?h=bXJiYWRnZXJ8aW58MTI1fDN8M3x8bm98NXxmYWRlT3V0fG9uU3RhcnR8eWVzfHllcw==&ve=051015" title="Instagram Widget" 
 						class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>	
 					</section>
+					</article>
 				</div>
 		
 			

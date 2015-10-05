@@ -137,6 +137,7 @@ body {
 }
 
 .social-feeds{
+	text-align: center;
 	color: #3d485e;
 	width: 17em;
 	float: right;
@@ -150,7 +151,6 @@ body {
 }
 
 .instagram-feed{
-	text-align: center;
 	padding: 1em;
 }
 
