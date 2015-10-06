@@ -69,7 +69,7 @@
 			
 
 			
-			<div id="paasivu">
+			<div class="paasivu">
 				<div class="tuotesivu">
 					<section class="tuote">
 							<h2>Otsikko</h2>
@@ -104,7 +104,6 @@
 					<p>footer</p>
 				</footer>
 			</div>
-		</div>
 			
 			<div id="fb-root"></div>
 			<script>(function(d, s, id) {
@@ -115,24 +114,22 @@
 			  fjs.parentNode.insertBefore(js, fjs);
 			}(document, 'script', 'facebook-jssdk'));</script>
 			
-			
-
-			
 			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 			<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 			<script type="text/javascript" src="assets/slick/slick.min.js"></script>
 			
+			
+			
 			<script>
 				$(document).ready(function(){
 					$('.banner-carousel').slick({
+						  lazyLoad: 'ondemand',
 						  slidesToShow: 1,
 						  slidesToScroll: 1,
 						  autoplay: true,
 						  autoplaySpeed: 3000,
 						  speed: 3000,
 						  fade: true
-						
-						  
 					});
 				});
 			</script>	
