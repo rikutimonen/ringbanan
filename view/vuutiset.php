@@ -21,4 +21,5 @@
    <?php
    }
    ?>
+   <a href="#">Näytä useampia</a>
 </div>

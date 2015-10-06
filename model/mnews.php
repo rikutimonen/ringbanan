@@ -4,7 +4,7 @@ session_set_cookie_params(0, SITE_ROOT);
 session_start();
 
 try {
-   $STH = $DBH->prepare("SELECT * FROM 0mrb_uutiset ORDER BY uutisID DESC LIMIT 10");
+   $STH = $DBH->prepare("SELECT * FROM 0mrb_uutiset ORDER BY pvm DESC LIMIT 10");
 	$STH->execute();
 	$STH->setFetchMode(PDO::FETCH_OBJ);
 	while($uutinen = $STH->fetch()) {

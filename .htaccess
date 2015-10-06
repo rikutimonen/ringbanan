@@ -1,5 +1,5 @@
 <IfModule mod_rewrite.c>
    RewriteEngine On
-   RewriteRule uutiset /~joonaoko/mrbadger/news.php
-   RewriteRule ^uutiset/([a-zA-Z0-9_-]+)/?$ /~joonaoko/mrbadger/news.php?uutisid=$1
+   RewriteRule uutiset /*** SITE ROOT ***/news.php
+   RewriteRule ^uutiset/([a-zA-Z0-9_-]+)/?$ /*** SITE ROOT ***/news.php?uutisid=$1
 </IfModule>
