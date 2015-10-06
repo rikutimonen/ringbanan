@@ -18,7 +18,7 @@
 <body>
 	<div id="sivu">
 	
-			<header class="main-header tummansininen">
+			<header class="main-header dark-gray">
 				<nav class="top-nav">
 					<ul>
 						<li><a href="#">HOME</a></li>
@@ -26,7 +26,7 @@
 						<li><a href="#">NEWS</a></li>
 						<li><a href="#">MERCHANDISE</a></li>
 						<li><a href="#">DISCUSSION</a></li>
-						<li><a href="#"><div id="check" class="sininen"><i class="fi-check large"></i></div><i class="fi-torso large"></i></a></li>
+						<li><a href="#"><div id="check" class="blue"><i class="fi-check large"></i></div><i class="fi-torso large"></i></a></li>
 					</ul>
 				</nav>
 			</header>
