@@ -1,0 +1,93 @@
+DB connection error: SQLSTATE[HY000] [2002] No such file or directory
+DB connection error: SQLSTATE[HY000] [2002] No such file or directory
+DB connection error: SQLSTATE[HY000] [2002] No such file or directory
+DB connection error: SQLSTATE[HY000] [2002] No such file or directory
+DB connection error: SQLSTATE[HY000] [2002] No such file or directory
+DB connection error: SQLSTATE[HY000] [2002] No such file or directory
+DB connection error: SQLSTATE[HY000] [2002] No such file or directory
+DB connection error: SQLSTATE[HY000] [2002] No such file or directory
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.nav_nimi' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.nav_nimi' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.nav_nimi' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.nav_nimi' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.nav_nimi' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.parent_cat_id' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.parent_cat_id' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.parent_cat_id' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.parent_cat_id' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk_tuotteet.parent_cat_id' in 'field list'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk.tuotteet.nimi' in 'order clause'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk.tuotteet.nimi' in 'order clause'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk.tuotteet.nimi' in 'order clause'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk.tuotteet.nimi' in 'order clause'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk.tuotteet.nimi' in 'order clause'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk.tuotteet.nimi' in 'order clause'
+products_index.php: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'vk.tuotteet.nimi' in 'order clause'
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 10
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':alakategoria
+						
+						ORDER BY vk_tuotteet.pvm DESC' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE vk_kategoriat.nav_nimi=:alakategoria
+						
+						ORDER BY vk_tuotteet.pvm' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE vk_kategoriat.nav_nimi=:alakategoria
+						
+						ORDER BY vk_tuotteet.pvm' at line 14
+products.php: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE vk_kategoriat.nav_nimi=:alakategoria
+						
+						ORDER BY vk_tuotteet.pvm' at line 14
