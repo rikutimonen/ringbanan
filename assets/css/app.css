@@ -19,8 +19,9 @@ body {
 .blue {
 	background-color: #068cb8;
 }
-
-.media-page{
+.soundcloud-player{
+	text-align: center;
+	margin-top: 48px;
 	color: #282929;
 	background-color: #fff;
 	border-radius: 0 20px 20px 0;
@@ -39,13 +40,30 @@ body {
 	border-left: 1px ;
 	border-color: #282929;
 	float: left;
-	width: 100%;
+	width: 50%;
 	box-shadow: 0 2px 2px #888888;
 }
 
 .gallery { 
 	text-align: center; 
 }
+
+.media-section div {
+    width:100%;
+}
+.media-section .header {
+    background-color:#FFF;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+.media-section .tuote {
+    display: none;
+    padding : 10px;
+	
+}
+
+
 .current-image-wrapper {
 	background-position: 50% 50%;
 	background-repeat: no-repeat;

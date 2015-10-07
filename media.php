@@ -5,47 +5,62 @@
 	include("includes/ibanner.php");
 ?>									
 			<div class="paasivu">
-			<!--Kuvagalleria-->
+				<div class="soundcloud-player">
+				<h2>Music</h2>
+				<div class="tuote">
+					<iframe width="100%" height="300" scrolling="no" frameborder="no" 
+					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/115459114&amp;color=068cb8&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+					</div>
+				</div>
+			
+				<!--YouTube-videot-->
 				<div class="media-section">
+				
+					<div class="header">
+						<h2>Music videos</h2>
+					</div>
+				
 					<section class="tuote">
-						<h2>Image gallery</h2>	
+
+					<h3> Mr. Badger - Gay Satan</h3>
+						<iframe width="460" height="315" src="https://www.youtube.com/embed/rM11pn26Ky0" frameborder="0" allowfullscreen></iframe>
+
+					<h3> Mr. Badger - Mercury</h3>
+						<iframe width="460" height="315" src="https://www.youtube.com/embed/L9DcmNWKRrY" frameborder="0" allowfullscreen></iframe>
+					</section>
+				</div>
+				
+							<!--Kuvagalleria-->
+				<div class="media-section">
+				<div class="header">
+					<h2>Image gallery</h2>
+				</div>
+						<div class="tuote">
 						<div id='gallery' class='gallery'>
 						  <div id='lg-wrap' class='current-image-wrapper'>
-							<img id='large' data-idx='0' src='http://lorempixel.com/640/480/'>
+							<img id='large' data-idx='0' src='http://lorempixel.com/400/480/'>
 						  </div>
 						  <ul id='thumbnails' class='thumbnails'>
 							<li>
-							  <a href='http://lorempixel.com/640/480/'>
-								<img data-idx='0' src='http://lorempixel.com/640/480/'>
+							  <a href='http://lorempixel.com/400/480/'>
+								<img data-idx='0' src='http://lorempixel.com/400/480/'>
 							  </a>
 							</li>
 							<li>
-							  <a href='http://lorempixel.com/641/480/'>
-								<img data-idx='1' src='http://lorempixel.com/641/480/'>
+							  <a href='http://lorempixel.com/401/480/'>
+								<img data-idx='1' src='http://lorempixel.com/401/480/'>
 							  </a>
 							</li>
 							<li>
-							  <a href='http://lorempixel.com/639/480/'>
-								<img data-idx='1' src='http://lorempixel.com/639/480/'>
+							  <a href='http://lorempixel.com/399/480/'>
+								<img data-idx='2' src='http://lorempixel.com/399/480/'>
 							  </a>
 							</li>
 						  </ul>
 						</div>
-					</section>
+					</div>
 				</div>
-
-				<!--YouTube-videot-->
-				<div class="media-section">
-					<section class="tuote">
-							<h2>Music Videos</h2>	
-
-					<h3> Mr. Badger - Gay Satan</h3>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/rM11pn26Ky0" frameborder="0" allowfullscreen></iframe>
-
-					<h3> Mr. Badger - Mercury</h3>
-						<iframe width="560" height="315" src="https://www.youtube.com/embed/L9DcmNWKRrY" frameborder="0" allowfullscreen></iframe>
-					</section>
-				</div>
+				
 				
 				<footer class = "dark-gray">
 					<p>footer</p>
@@ -84,6 +99,23 @@
 				  }, 50);
 				  e.preventDefault();
 				}, false);
+				
+				$(".header").click(function () {
+
+    $header = $(this);
+    //getting the next element
+    $tuote = $header.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $tuote.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        $header.text(function () {
+            //change text based on condition
+         //   return $tuote.is(":visible") ? "Image gallery" : "Image gallery";
+        });
+    });
+
+});
 				
 			</script>	
 	</body>
