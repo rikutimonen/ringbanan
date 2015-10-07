@@ -1,7 +1,13 @@
+ <?php
+	//Navigaatio, joka näkyy jokaisella sivulla
+	include("includes/iheader.php");
+	
+	include("includes/ibanner.php");
+?>									
 			<div class="paasivu">
 				<div class="soundcloud-player">
 				<h2>Music</h2>
-				<div class="mediasisalto">
+				<div class="tuote">
 					<iframe width="100%" height="300" scrolling="no" frameborder="no" 
 					src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/115459114&amp;color=068cb8&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
 					</div>
@@ -14,7 +20,7 @@
 						<h2>Music videos</h2>
 					</div>
 				
-					<section class="mediasisalto">
+					<section class="tuote">
 
 					<h3> Mr. Badger - Gay Satan</h3>
 						<iframe width="460" height="315" src="https://www.youtube.com/embed/rM11pn26Ky0" frameborder="0" allowfullscreen></iframe>
@@ -29,7 +35,7 @@
 				<div class="header">
 					<h2>Image gallery</h2>
 				</div>
-						<div class="mediasisalto">
+						<div class="tuote">
 						<div id='gallery' class='gallery'>
 						  <div id='lg-wrap' class='current-image-wrapper'>
 							<img id='large' data-idx='0' src='http://lorempixel.com/400/480/'>
@@ -53,11 +59,33 @@
 						  </ul>
 						</div>
 					</div>
+				</div>
+				
+				
+				<footer class = "dark-gray">
+					<p>footer</p>
+				</footer>
 			</div>
 		</div>
+			
 			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+			<script type="text/javascript" src="assets/slick/slick.min.js"></script>
+			
 			<script>
+				$(document).ready(function(){
+					$('.banner-carousel').slick({
+						  slidesToShow: 1,
+						  slidesToScroll: 1,
+						  autoplay: true,
+						  autoplaySpeed: 3000,
+						  speed: 3000,
+						  fade: true 
+					});
+				});
+				
 				var th = document.getElementById('thumbnails');
+
 				th.addEventListener('click', function(e) {
 				  var t = e.target, new_src = t.parentNode.href, 
 					  large = document.getElementById('large'),
@@ -73,17 +101,22 @@
 				}, false);
 				
 				$(".header").click(function () {
-					$header = $(this);
-					//getting the next element
-					$mediasisalto = $header.next();
-					//open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-					$mediasisalto.slideToggle(500, function () {
-						//execute this after slideToggle is done
-						//change text of header based on visibility of content div
-						$header.text(function () {
-							//change text based on condition
-						 //   return $tuote.is(":visible") ? "Image gallery" : "Image gallery";
-						});
-					});
-				});
+
+    $header = $(this);
+    //getting the next element
+    $tuote = $header.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $tuote.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        $header.text(function () {
+            //change text based on condition
+         //   return $tuote.is(":visible") ? "Image gallery" : "Image gallery";
+        });
+    });
+
+});
+				
 			</script>	
+	</body>
+</html>
