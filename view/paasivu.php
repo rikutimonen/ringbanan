@@ -20,12 +20,33 @@
 							<blockquote cite="https://www.facebook.com/badgercore"><a href="https://www.facebook.com/badgercore">Mr.Badger</a></blockquote></div></div>				
 						</article>
 					</section>
-					<section class ="instagram-feed">
+					<section class ="twitter-feed">
 					<article>
-						<h2>Instagram</h2>
-						<p>#badgerbadger</p>
-						<!-- INSTANSIVE WIDGET --><script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/ebc9fb6653ea5ad670f6801acceb66d79f9b8cb9.html" 
-						id="instansive_ebc9fb6653" name="instansive_ebc9fb6653"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+						<h2>Twitter</h2>
+						<a class="twitter-timeline"
+						  data-widget-id="600720083413962752"
+						  href="https://twitter.com/mrbadgerband"
+						  data-screen-name="mrbadgerband">
+						Tweets by @mrbadgerband
+						</a>
 					</section>
 					</article>
 				</div>
+				<script>
+				  window.twttr = (function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0],
+					t = window.twttr || {};
+				  if (d.getElementById(id)) return t;
+				  js = d.createElement(s);
+				  js.id = id;
+				  js.src = "https://platform.twitter.com/widgets.js";
+				  fjs.parentNode.insertBefore(js, fjs);
+				 
+				  t._e = [];
+				  t.ready = function(f) {
+					t._e.push(f);
+				  };
+				 
+				  return t;
+				}(document, "script", "twitter-wjs"));
+				</script>

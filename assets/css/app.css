@@ -219,8 +219,7 @@ body {
 .facebook-feed{
 	padding: 1em;
 }
-
-.instagram-feed{
+.twitter-feed{
 	padding: 1em;
 }
 
@@ -291,7 +290,6 @@ footer {
 
 
 .tuotesivu {
-
 	background-color: #fff;
 	border-right: #fff 1px solid;
 	border-left: #fff 1px solid;
@@ -313,7 +311,19 @@ footer {
     padding : 10px;
 	
 }
-
+.main-container{
+	color: #282929;
+	background-color: #fff;
+	border-radius: 0 20px 20px 0;
+	border-left: 1px ;
+	border-color: #282929;
+	float: left;
+	width: 45em;
+	box-shadow: 0 2px 2px #888888;
+}
+.main-content{
+	padding: 1em;
+}
 
 .tuote {
 
