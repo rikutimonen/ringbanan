@@ -1,5 +1,5 @@
 <?php
-//define('SITE_ROOT', '');
+define('SITE_ROOT', '/~rikuti/web_sovellus/ringbanan-master/');
 
 $user = 'joonaoko';
 $pass = 'Kumiankka';
