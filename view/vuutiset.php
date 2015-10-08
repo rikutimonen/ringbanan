@@ -6,7 +6,7 @@
    ?>
 
    <?php
-   if($_SESSION['taso']<2) {
+   if($_SESSION['taso']>2) {
    ?>
    <div class="artikkeli-kirjoitus">
       <h3 class="sininen">Luo uusi artikkeli</h3>
