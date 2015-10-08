@@ -40,7 +40,7 @@
             if($_SESSION['taso']>2) {
             ?>
                <form action="<?php echo(SITE_ROOT)?>model/mnewsDeleteArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" method="post">
-                  <input type="submit" value="Poista artikkeli" class="orange button" data-uutisid="<?php echo($uutinen->uutisID);?>">
+                  <input type="submit" value="Poista artikkeli" class="red button" data-uutisid="<?php echo($uutinen->uutisID);?>">
                </form>
             <?php
             }

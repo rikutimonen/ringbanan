@@ -52,7 +52,7 @@
                   if($_SESSION['taso']>2) {
                   ?>
                      <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleDeleteComment.php?kommenttiid=<?php echo($uutiskommentti->kommenttiid);?>" method="post">
-                        <input type="submit" value="Poista kommentti" class="orange button" data-uutisid="<?php echo($uutiskommentti->k_uutisID);?>">
+                        <input type="submit" value="Poista kommentti" class="red button" data-uutisid="<?php echo($uutiskommentti->k_uutisID);?>">
                      </form>
                   <?php
                   }
@@ -66,7 +66,7 @@
       ?>
       <h3 class="sininen">Kommentoi</h3>
       <?php
-      if(/*$_SESSION['taso']>1*/ 1>0) { // *** PLACEHOLDER
+      if($_SESSION['taso']>1) {
          $_SESSION['uutisid'] = $uutinen->uutisID;
          $_SESSION['userid'] = 1;
       ?>
