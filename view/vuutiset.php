@@ -6,10 +6,14 @@
    ?>
 
    <?php
-   if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
+   if($_SESSION['taso']<2) {
    ?>
    <div class="artikkeli-kirjoitus">
       <h3 class="sininen">Luo uusi artikkeli</h3>
+      <p>
+         <?php echo("Asd");?>
+         <?php echo($_SESSION['taso']);?>
+      </p>
       <form action="<?php echo(SITE_ROOT)?>model/mnewsAddArticle.php" class="uutisen-luonti" method="post" id="create-article-form-<?php echo($uutinen->uutisID);?>">
          <input type="text" name="otsikko" placeholder="Otsikko">
          <br><br>
@@ -33,7 +37,7 @@
             <a href="#">Kommentoi</a>
             <a href="#">Jaa</a>
             <?php
-            if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
+            if($_SESSION['taso']>2) {
             ?>
                <form action="<?php echo(SITE_ROOT)?>model/mnewsDeleteArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" method="post">
                   <input type="submit" value="Poista artikkeli" class="orange button" data-uutisid="<?php echo($uutinen->uutisID);?>">

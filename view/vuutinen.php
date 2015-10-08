@@ -15,7 +15,7 @@
    <hr>
 
    <?php
-   if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
+   if($_SESSION['taso']>2) {
    ?>
    <div class="artikkeli-kirjoitus">
       <h3 class="sininen">Muokkaa artikkelia</h3>
@@ -49,7 +49,7 @@
                   <p><?php echo($uutiskommentti->teksti);?></p>
                   <p class="pvm"><?php echo($uutiskommentti->pvm);?></p>
                   <?php
-                  if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
+                  if($_SESSION['taso']>2) {
                   ?>
                      <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleDeleteComment.php?kommenttiid=<?php echo($uutiskommentti->kommenttiid);?>" method="post">
                         <input type="submit" value="Poista kommentti" class="orange button" data-uutisid="<?php echo($uutiskommentti->k_uutisID);?>">
