@@ -6,19 +6,19 @@
 						<ul>
 							<?php
 							// kategoriat rekursiivisesti
-							$kategoriat = haeKategoriat ( $DBH );
-							foreach ( $kategoriat as $kateg ) {
+							$categories = haeKategoriat ( $DBH );
+							foreach ( $categories as $categ ) {
 							?>
 					    			<li>
 					        			<?php
-								    if ($_GET ['kat'] == $kateg->nav_nimi) {
+								    if ($_GET ['kat'] == $categ->kNimi) {
 									?>
-					    					<a 	href="<?php echo SITE_ROOT; ?><?php echo $kateg->nav_nimi; ?>"
-										class="valittu"><?php echo $kateg->nimi; ?></a>
+					    					<a 	href="<?php echo SITE_ROOT; ?><?php echo $categ->kNimi; ?>"
+										class="valittu"><?php echo $categ->kNimi; ?></a>
 					            			<?php
 										} 
 									 else {	?>
-					    					<a 	href="<?php echo SITE_ROOT; ?><?php echo $kateg->nav_nimi; ?>"><?php echo $kateg->nimi; ?></a>
+					    					<a 	href="<?php echo SITE_ROOT; ?><?php echo $categ->kNimi; ?>"><?php echo $categ->kNimi; ?></a>
 					      			<?php
 									} ?>
 					    			</li>
@@ -29,7 +29,9 @@
 				<div class="tuotesivu">
 					<section class="tuote">
 							  <?php
+
 									require_once('model/mproducts.php');
+							
 								    //Kysely päivittää taulukkoon $tuotteet tuoteolioita
 							  		foreach($products as $product){
 							          	tulostaTuote($product);

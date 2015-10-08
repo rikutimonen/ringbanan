@@ -4,7 +4,7 @@
  * @param unknown $user
  * @param unknown $pwd
  * @param unknown $DBH
- * @return found boolean false jos annettua käyttäjää ja salasanaa löydy
+ * @return found boolean false jos annettua kÃ¤yttÃ¤jÃ¤Ã¤ ja salasanaa lÃ¶ydy
  */
 function login($user, $pwd, $DBH) {
 	// !! on suola, jotta kantaan taltioitu eri hashkoodi vaikka salasana olisi tiedossa
@@ -40,26 +40,21 @@ function login($user, $pwd, $DBH) {
 
 
 // haetaan katekgoriat rekursiivisesti
-//Pääkategorian parent_cat_id =0
+//PÃ¤Ã¤kategorian parent_cat_id =0
 
 function haeKategoriat($DBH, $parent = 0, $categories = array()) {
 	$haara = array();
-	//Haetaan ensin pääkategoriat, seuraavaksi alempi jne niin kauan kuin löytyy
-	$STH = $DBH->query("SELECT * FROM vk_kategoriat WHERE parent_cat_id=$parent");
+	//Haetaan ensin pÃ¤Ã¤kategoriat, seuraavaksi alempi jne niin kauan kuin lÃ¶ytyy
+	$STH = $DBH->query("SELECT 0mrb_kategoriat.kNimi FROM 0mrb_kategoriat");
 	$STH->setFetchMode(PDO::FETCH_OBJ);
 	while ($category = $STH->fetch()) {
-		//Onko pääkategoria?
-		if($category->parent_cat_id == $parent){
-			//Löytyyköhän lapsia? Jatketaan haaran syventämistä....
-			$lapset = haeKategoriat($DBH, $category->kID, $categories);
-			if($lapset){
-				$category->lapset = $lapset;
-			}
 			$haara[] = $category;
 		}
-	}
+	
 	return $haara;
 }
+
+
 /**
  * Hakee satunnaisen tuotteen annetusta kategoriasta
  * @param unknown $DBH
@@ -68,7 +63,7 @@ function haeKategoriat($DBH, $parent = 0, $categories = array()) {
 /*function haeRandomKuva($DBH, $kat){
 	$STH = $DBH->query("SELECT * FROM vk_tuotteet JOIN vk_kategorialiitos ON vk_tuotteet.tID = vk_kategorialiitos.tuote_id WHERE vk_kategorialiitos.kategoria_id = $kat ORDER BY RAND();");
 	$STH->setFetchMode(PDO::FETCH_OBJ);
-	$tuote = $STH->fetch(); //Haetaan ensimmäinen annetuista satunnaisesti valituista tuotteista
+	$tuote = $STH->fetch(); //Haetaan ensimmÃ¤inen annetuista satunnaisesti valituista tuotteista
 	echo SITE_ROOT.'assets/img/pikkukuvat/'.$tuote->tID.'.jpg';
 }
 
@@ -76,27 +71,27 @@ function haeKategoriat($DBH, $parent = 0, $categories = array()) {
 /**
  * Tulostaa yhden tuotteen tuotekuvalla (pienin). 
  * Tietokantakyselyn palauttaman rivin eli yhden tuotteen tiedot on sijoitettu olioon
- * @param  $tuote Olio joka sisältää yhden tuoteen tiedot (PDO:n tuottama)
+ * @param  $tuote Olio joka sisÃ¤ltÃ¤Ã¤ yhden tuoteen tiedot (PDO:n tuottama)
  */
 function tulostaTuote($product){
 	//print_r($tuote);
 ?>
 	<article>
 	        <!-- Linkiksi teksti: kategoria/alakategoria/tuote  ... 
-	        tuotenimessävälilyönnit korvattuna alaviivalla -->
+	        tuotenimessÃ¤vÃ¤lilyÃ¶nnit korvattuna alaviivalla -->
 	        <!-- Kuvan nimi on sama kuin tuotteen indeksi kannassa -->
-	        <!-- HUOM! ÄLÄ LAITA SEURAAVAA monelle riville, tulee välilyöntejä mukaan -->
+	        <!-- HUOM! Ã„LÃ„ LAITA SEURAAVAA monelle riville, tulee vÃ¤lilyÃ¶ntejÃ¤ mukaan -->
             <!-- <a href="<?php echo SITE_ROOT;?><?php echo $product->kNimi; ?>/<?php echo $product->akNimi; ?>/<?php echo str_replace(' ', '_', $product->nimi); ?>"> -->
-             
+          
     		 <img src="assets/img/pikkukuvat/<?php echo $product->tID;?>">
              <button class="koriin button punainen" data-tid="<?php echo $product->tID; ?>">
              Add to cart</button>
              
-             <h2><?php echo $product->nimi;?></h2>
+             <h2><?php echo $product->tNimi;?></h2>
              <div class="hinta">
-             	<?php echo $product->hinta;?> €
+             	<?php echo $product->tHinta;?> â‚¬
              </div>
-             <p><?php echo substr($product->kuvaus, 0, 100); ?>...</p>
+             <p><?php echo $product->tKuvaus;?></p>
             
             </a>
      </article>

@@ -15,7 +15,8 @@ try {
 
 						WHERE
 
-						0mrb_tuotteet.katID = 0mrb_kategoriat.kID
+						0mrb_tuotteet.katID = 0mrb_kategoriat.kID AND
+						0mrb_kategoriat.kID = 2
 
 						ORDER BY 0mrb_tuotteet.tID");
 
