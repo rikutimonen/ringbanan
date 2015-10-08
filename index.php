@@ -32,6 +32,10 @@
 		//DISCUSSION
 		//nclude("media.php");
 	}
+	else if ($_GET['osio'] == register) {
+		require_once('view/vrekisteroi.php');
+	}
+	
 	else {
 		//mainpage
 		include("includes/ibanner.php");
@@ -41,6 +45,7 @@
 	}
 	include("view/footer.php");
 ?>
+		</div>
 	</body>
 </html>
 			
