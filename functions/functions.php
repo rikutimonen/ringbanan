@@ -19,7 +19,7 @@ function login($user, $pwd, $DBH) {
 	try {
 		//print_r($data);
 		//echo "Login 1<br />";
-		$STH = $DBH->prepare("SELECT * FROM vk_asiakas WHERE email=:kayttaja AND
+		$STH = $DBH->prepare("SELECT * FROM 0mrb_users WHERE email=:kayttaja AND
 		pwd = :passu");
 		$STH->execute($data);
 		$STH->setFetchMode(PDO::FETCH_OBJ);

@@ -18,8 +18,8 @@ try {
 		$userdata['pwd'] = md5($userdata['pwd'].'!!');  //hashataan salasana
 		
 		try {
-			$STH2 = $DBH->prepare("INSERT INTO 0mrb_users (username, enimi, snimi, email, puhnro, postinro, kaupunki, osoite, pwd)
-								   VALUES (:username, :enimi, :snimi, :email, :puhnro, :postinro, :kaupunki, :osoite, :pwd)");
+			$STH2 = $DBH->prepare("INSERT INTO 0mrb_users (username, enimi, snimi, email, puhnro, postinro, kaupunki, osoite, pwd, taso)
+								   VALUES (:username, :enimi, :snimi, :email, :puhnro, :postinro, :kaupunki, :osoite, :pwd, 2)");
 			if($STH2->execute($userdata)){
 				
 					try { 
@@ -28,7 +28,7 @@ try {
 					$STH3 = $DBH->query($sql);
 					$STH3->setFetchMode(PDO::FETCH_OBJ);
 					$user = $STH3->fetch();
-					$_SESSION['kirjautunut'] = 'jep';
+					$_SESSION['kirjautunut'] = 'logged in';
 					$_SESSION['username'] = $user->username;
 					$_SESSION['enimi'] = $user->enimi;
 					$_SESSION['snimi'] = $user->snimi;
@@ -48,7 +48,7 @@ try {
 			file_put_contents('log/DBErrors.txt', 'tallennaKayttaja 2: '.$e->getMessage()."\n", FILE_APPEND);
 		}
 	} else {
-		echo 'Käyttäjä on jo olemassa.';
+		echo 'User already exists.';
 	}
 } catch(PDOException $e) {
 	echo 'Tietokantaerhe.';

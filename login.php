@@ -9,11 +9,12 @@ SSLon();
 //user oliossa kayttajatiedot jos ok, muuten false
 
 $user = login($_POST['email'], $_POST['pwd'], $DBH);
-//print_r($user);
+print_r($_POST['email'] . $_POST['pwd']);
 if(!$user){
 	$_SESSION['loggausvirhe'] = 'jep';
+	print_r("ei useria");
 	//Aiheuttaa alert() pääsivulla
-	redirect(SITE_ROOT);
+	//redirect(SITE_ROOT);
 } else {
 	unset($_SESSION['loggausvirhe']);
 	//Jos k�ytt�j� tunnistettiin, talletetaan tiedot sessioon esim. kassalle siirtymist�
@@ -27,9 +28,10 @@ if(!$user){
 	$_SESSION['postinro'] = $user->postinro;
 	$_SESSION['kaupunki'] = $user->kaupunki;
 	$_SESSION['osoite'] = $user->osoite;
-	//print_r($_SESSION);
+	print_r($_SESSION);
+	print_r("useri?");
 	//Jos loggaus onnistuu niin palataan paasivulle
-	redirect(SITE_ROOT);
+	//redirect(SITE_ROOT);
 }
 
 
