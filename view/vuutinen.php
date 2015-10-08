@@ -1,4 +1,4 @@
-<div class="uutinen">
+<div>
    <?php
    include("model/mnewsArticle.php");
    include("model/mnewsArticleComments.php");
@@ -17,18 +17,20 @@
    <?php
    if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
    ?>
-   <h3 class="sininen">Muokkaa artikkelia</h3>
-   <form action="model/mnewsModifyArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" class="uutisen-muokkaus" method="post" id="modify-article-form-<?php echo($uutinen->uutisID);?>">
-      <input type="text" name="otsikko" placeholder="Otsikko" value="<?php echo($uutinen->otsikko);?>">
-      <br><br>
-      <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="modify-article-form-<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->teksti);?></textarea>
-      <br>
-      <input type="submit" value="Tallenna muutokset" class="button">
-   </form>
-   <hr>
-   <?php
-   }
-   ?>
+   <div class="artikkeli-kirjoitus">
+      <h3 class="sininen">Muokkaa artikkelia</h3>
+      <form action="model/mnewsModifyArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" class="uutisen-muokkaus" method="post" id="modify-article-form-<?php echo($uutinen->uutisID);?>">
+         <input type="text" name="otsikko" placeholder="Otsikko" value="<?php echo($uutinen->otsikko);?>">
+         <br><br>
+         <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="modify-article-form-<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->teksti);?></textarea>
+         <br>
+         <input type="submit" value="Tallenna muutokset" class="orange button">
+      </form>
+      <hr>
+      <?php
+      }
+      ?>
+   </div>
 
    <section class="kommentit">
       <h3 class="sininen">Kommentit</h3>
@@ -50,7 +52,7 @@
                   if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
                   ?>
                      <form action="model/mnewsArticleDeleteComment.php?kommenttiid=<?php echo($uutiskommentti->kommenttiid);?>" method="post">
-                        <input type="submit" value="Poista kommentti" class="button" data-uutisid="<?php echo($uutiskommentti->k_uutisID);?>">
+                        <input type="submit" value="Poista kommentti" class="orange button" data-uutisid="<?php echo($uutiskommentti->k_uutisID);?>">
                      </form>
                   <?php
                   }
@@ -73,7 +75,7 @@
          <br><br>
          <textarea rows="8" cols="100" name="teksti" placeholder="Kirjoita tähän" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>
          <br>
-         <input type="submit" value="Kommentoi" class="button" data-uutisid="<?php echo($uutinen->uutisID);?>">
+         <input type="submit" value="Kommentoi" class="orange button" data-uutisid="<?php echo($uutinen->uutisID);?>">
       </form>
       <?php
       } else {
