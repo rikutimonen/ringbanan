@@ -26,7 +26,21 @@
 						<li><a href="<?php echo(SITE_ROOT);?>uutiset">NEWS</a></li>
 						<li><a href="<?php echo(SITE_ROOT);?>merchandise">MERCHANDISE</a></li>
 						<li><a href="<?php echo(SITE_ROOT);?>discussion">DISCUSSION</a></li>
-						<li><a href="<?php echo(SITE_ROOT);?> "><div id="check" class="blue"><i class="fi-check large"></i></div><i class="fi-torso large"></i></a></li>
+						<li><a href="#" id="cart-button" class="open-modal" data-target="cart-modal">OSTOSKORI</a></li>
+						<li><a href="#" id="check" class="open-modal" data-target="log-modal">login<i class="fi-check large"></i><i class="fi-torso large"></i></a></li>
 					</ul>
 				</nav>
+				<div class="cart" id="cart-modal" style="opacity: 0; display: none;">
+					<href="#" class="close-modal">x</a>
+					<?php include("includes/iostoskori.php"); ?>
+				</div>
+				
+				
+				
+				<div class="user" id="log-modal" style="opacity: 0; display: none;">
+					<a href="#" class="close-modal"> X </a>
+					<?php include("includes/ilog_sign.php"); ?>
+					
+				</div>
 			</header>
+		<div id="kokosivu_cont">
