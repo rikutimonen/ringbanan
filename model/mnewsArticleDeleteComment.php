@@ -16,5 +16,5 @@ try {
 	$_SESSION['viesti'] = 'Kommentin poistamisessa ongelma.';
 }
 
-redirect(SITE_ROOT . "news.php?uutisid=" . $_SESSION['uutisid']);
+redirect(SITE_ROOT . "uutiset/" . $_SESSION['uutisid']);
 ?>

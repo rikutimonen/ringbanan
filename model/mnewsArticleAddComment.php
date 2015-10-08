@@ -17,5 +17,5 @@ try {
     file_put_contents('../log/DBErrors.txt', 'mnewsArticleAddComment.php: ' . $e->getMessage() . "\n", FILE_APPEND);
 }
 
-redirect(SITE_ROOT . "news.php?uutisid=" . $_SESSION['uutisid']);
+redirect(SITE_ROOT . "uutiset/" . $_SESSION['uutisid']);
 ?>
