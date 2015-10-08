@@ -2,45 +2,51 @@
     <section class="rekist">
     <h3>Rekisteröityminen</h3>
     Tähdellä merkityt kentät ovat pakollisia.
-<form action="vahvista" method="post">
+<form action="vahvistarek" method="post">
 	<?php
     if(isset($_SESSION['lomakedata'])):
 		$lomakedata = unserialize($_SESSION['lomakedata']);
 	?>
-    <input type="text" name="data[etunimi]" value="<?php echo $lomakedata['etunimi']; ?>" required><span>*</span>
+	<input type="text" name="data[username]" value="<?php echo $lomakedata['username']; ?>" required><span>*</span>
     <br>
-    <input type="text" name="data[sukunimi]" value="<?php echo $lomakedata['sukunimi']; ?>" required><span>*</span>
+	<input type="text" name="data[enimi]" value="<?php echo $lomakedata['enimi']; ?>" required><span>*</span>
     <br>
-    <input type="email" name="data[email]" value="<?php echo $lomakedata['email']; ?>" required><span>*</span>
+	<input type="text" name="data[snimi]" value="<?php echo $lomakedata['snimi']; ?>" required><span>*</span>
     <br>
-    <input type="tel" name="data[puhelin]" value="<?php echo $lomakedata['puhelin']; ?>" required><span>*</span>
+	<input type="email" name="data[email]" value="<?php echo $lomakedata['email']; ?>" required><span>*</span>
     <br>
-    <input type="text" name="data[osoite]" value="<?php echo $lomakedata['osoite']; ?>" required><span>*</span>
+	<input type="tel" name="data[puhnro]" value="<?php echo $lomakedata['puhnro']; ?>" required><span>*</span>
     <br>
-    <input type="number" name="data[postinumero]" value="<?php echo $lomakedata['postinumero']; ?>" required><span>*</span>
+	<input type="number" name="data[postinro]" value="<?php echo $lomakedata['postinro']; ?>" required><span>*</span>
     <br>
-    <input type="text" name="data[kaupunki]" value="<?php echo $lomakedata['kaupunki']; ?>" required><span>*</span>
+	<input type="text" name="data[kaupunki]" value="<?php echo $lomakedata['kaupunki']; ?>" required><span>*</span>
+    <br>
+	<input type="text" name="data[osoite]" value="<?php echo $lomakedata['osoite']; ?>" required><span>*</span>
+    <br>
     <?php
 	else: 
 	?>
-    <input type="text" name="data[etunimi]" placeholder="Etunimi" required><span>*</span>
+	<input type="text" name="data[username]" placeholder="Username" required><span>*</span>
     <br>
-    <input type="text" name="data[sukunimi]" placeholder="Sukunimi" required><span>*</span>
+	<input type="text" name="data[enimi]" placeholder="Surname" required><span>*</span>
     <br>
-    <input type="email" name="data[email]" placeholder="Sähköposti" required><span>*</span>
+	<input type="text" name="data[snimi]" placeholder="Lastname" required><span>*</span>
     <br>
-    <input type="tel" name="data[puhelin]" placeholder="Puhelin" required><span>*</span>
+	<input type="email" name="data[email]" placeholder="Email" required><span>*</span>
     <br>
-    <input type="text" name="data[osoite]" placeholder="Osoite" required><span>*</span>
+	<input type="tel" name="data[puhnro]" placeholder="Phone number" required><span>*</span>
     <br>
-    <input type="number" name="data[postinumero]" placeholder="Postinumero" required><span>*</span>
+	<input type="number" name="data[postinro]" placeholder="Postal code" required><span>*</span>
     <br>
-    <input type="text" name="data[kaupunki]" placeholder="Kaupunki" required><span>*</span>
+	<input type="text" name="data[kaupunki]" placeholder="City" required><span>*</span>
+    <br>
+	<input type="text" name="data[osoite]" placeholder="Address" required><span>*</span>
+    <br>
     <?php
 	endif;
 	?>
 	<br>
-    <input type="password" name="data[pwd]" placeholder="Salasana" required><span>*</span>
+    <input type="password" name="data[pwd]" placeholder="Password" required><span>*</span>
     <br>
     <input type="submit" value="Tallenna">
 </form>

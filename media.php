@@ -55,7 +55,7 @@
 					</div>
 			</div>
 		</div>
-			<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+			<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 			<script>
 				var th = document.getElementById('thumbnails');
 				th.addEventListener('click', function(e) {

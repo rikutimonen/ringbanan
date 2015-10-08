@@ -8,11 +8,8 @@
 	//Navigaatio, joka näkyy jokaisella sivulla
 	include("includes/iheader.php");
 	
-	//Vaihtuva banneri, joka näkyy vain etusivulla
-	
-	
+		//UUTISET	
 	if ( $_GET ['osio'] == uutiset){
-		//UUTISET
 		if (isset($_GET['uutisid'])) {
 			include("view/vuutinen.php");
 			}
@@ -20,32 +17,51 @@
 			   include("view/vuutiset.php");
 			}
 	}
+	
+	//MEDIA
 	else if ($_GET['osio'] == mediat) {
-		//MEDIA
 		include("media.php");
 	}
+	
+	//MERCHANDISE
 	else if ($_GET['osio'] == merchandise) {
-		//MERCHANDISE
 		include("includes/iproduct.php");
 	}
+		//DISCUSSION	
 	else if ($_GET['osio'] == discussion) {
-		//DISCUSSION
 		//nclude("media.php");
 	}
+	
+	//// 	 REKISTERÖINTI 		 /////
 	else if ($_GET['osio'] == register) {
 		require_once('view/vrekisteroi.php');
 	}
+	////  REKISTERÖINNIN VAHVISTUS  /////
+	else if ($_GET['osio'] == vahvistarek) {
+		require_once('view/vvahvista.php');
+	}
+	////  TALLENNA REKISTERÖINTI	/////
+	else if ($_GET['osio'] == tallennakayttaja) {
+		require_once('save_user.php');
+	}
 	
+	////  LOGIN	/////
+	else if ($_GET['osio'] == login) {
+		require_once('login.php');
+	}
+	
+	//Heitä pääsivulle jos mikätahansa muu pääte sivulla
 	else {
-		//mainpage
+
 		include("includes/ibanner.php");
 		include("view/audioplayer.php");
 		include("view/paasivu.php");
-		
 	}
+	// FOOTER aina pohjalla
 	include("view/footer.php");
 ?>
 		</div>
+	<!---- javascript lataus ---->
 	<script src="<?php echo SITE_ROOT; ?>assets/js/app.js"></script>
 	</body>
 </html>

@@ -2,7 +2,7 @@
 	<div class="loginframe">
 		<div class="user-login">
 			Kirjaudu sisaan.
-			<form action="<?php echo SITE_ROOT?>login.php" method="post">
+			<form action="<?php echo SITE_ROOT?>login" method="post">
 				<label>Sahkoposti:&nbsp;</label>
 				<input type="text" name="email">
 				<br>
