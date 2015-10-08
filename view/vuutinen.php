@@ -19,7 +19,7 @@
    ?>
    <div class="artikkeli-kirjoitus">
       <h3 class="sininen">Muokkaa artikkelia</h3>
-      <form action="model/mnewsModifyArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" class="uutisen-muokkaus" method="post" id="modify-article-form-<?php echo($uutinen->uutisID);?>">
+      <form action="<?php echo(SITE_ROOT)?>model/mnewsModifyArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" class="uutisen-muokkaus" method="post" id="modify-article-form-<?php echo($uutinen->uutisID);?>">
          <input type="text" name="otsikko" placeholder="Otsikko" value="<?php echo($uutinen->otsikko);?>">
          <br><br>
          <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="modify-article-form-<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->teksti);?></textarea>
@@ -51,7 +51,7 @@
                   <?php
                   if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
                   ?>
-                     <form action="model/mnewsArticleDeleteComment.php?kommenttiid=<?php echo($uutiskommentti->kommenttiid);?>" method="post">
+                     <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleDeleteComment.php?kommenttiid=<?php echo($uutiskommentti->kommenttiid);?>" method="post">
                         <input type="submit" value="Poista kommentti" class="orange button" data-uutisid="<?php echo($uutiskommentti->k_uutisID);?>">
                      </form>
                   <?php
@@ -70,7 +70,7 @@
          $_SESSION['uutisid'] = $uutinen->uutisID;
          $_SESSION['userid'] = 1;
       ?>
-      <form action="model/mnewsArticleAddComment.php" class="kommentti" method="post" id="commentform-<?php echo($uutinen->uutisID);?>">
+      <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleAddComment.php" class="kommentti" method="post" id="commentform-<?php echo($uutinen->uutisID);?>">
          <input type="text" name="otsikko" placeholder="Otsikko">
          <br><br>
          <textarea rows="8" cols="100" name="teksti" placeholder="Kirjoita tähän" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>

@@ -10,7 +10,7 @@
    ?>
    <div class="artikkeli-kirjoitus">
       <h3 class="sininen">Luo uusi artikkeli</h3>
-      <form action="model/mnewsAddArticle.php" class="uutisen-luonti" method="post" id="create-article-form-<?php echo($uutinen->uutisID);?>">
+      <form action="<?php echo(SITE_ROOT)?>model/mnewsAddArticle.php" class="uutisen-luonti" method="post" id="create-article-form-<?php echo($uutinen->uutisID);?>">
          <input type="text" name="otsikko" placeholder="Otsikko">
          <br><br>
          <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="create-article-form-<?php echo($uutinen->uutisID);?>"></textarea>
