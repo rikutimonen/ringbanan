@@ -46,6 +46,7 @@
 	include("view/footer.php");
 ?>
 		</div>
+	<script src="<?php echo SITE_ROOT; ?>assets/js/app.js"></script>
 	</body>
 </html>
 			
