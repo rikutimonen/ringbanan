@@ -5,9 +5,7 @@ session_set_cookie_params(0, SITE_ROOT);
 session_start();
 
 try {
-   $STH = $DBH->prepare("INSERT INTO 0mrb_uutiskommentit (k_uutisID, k_userID, otsikko, teksti, pvm) VALUES (:k_uutisID, :k_userID, :otsikko, :teksti, :pvm)");
-   $STH->bindParam(':k_uutisID', $_SESSION['uutisid']);
-   $STH->bindParam(':k_userID', $_SESSION['userid']);
+   $STH = $DBH->prepare("INSERT INTO 0mrb_uutiset (otsikko, teksti, pvm) VALUES (:otsikko, :teksti, :pvm)");
    $STH->bindParam(':otsikko', $_POST['otsikko']);
    $STH->bindParam(':teksti', $_POST['teksti']);
    $STH->bindParam(':pvm', date('y-m-d H:m:s'));
@@ -17,5 +15,5 @@ try {
     file_put_contents('../log/DBErrors.txt', 'mnewsArticleAddComment.php: ' . $e->getMessage() . "\n", FILE_APPEND);
 }
 
-redirect(SITE_ROOT . "news.php?uutisid=" . $_SESSION['uutisid']);
+redirect(SITE_ROOT . "uutiset");
 ?>

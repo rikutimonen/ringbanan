@@ -5,7 +5,7 @@ session_start();
 
 try {
 	$uutiskommentit = array();
-	$STH = $DBH->prepare("SELECT USER.username 'username', UK.otsikko 'otsikko', UK.teksti 'teksti', UK.pvm 'pvm', UK.k_uutisID 'k_uutisID'
+	$STH = $DBH->prepare("SELECT USER.username 'username', UK.otsikko 'otsikko', UK.teksti 'teksti', UK.pvm 'pvm', UK.k_uutisID 'k_uutisID', UK.kommenttiID 'kommenttiid' 
                         FROM 0mrb_uutiset U
                         LEFT JOIN 0mrb_uutiskommentit UK ON UK.k_uutisID = U.uutisID
                         LEFT JOIN 0mrb_users USER ON UK.k_userID = USER.userID
