@@ -20,11 +20,13 @@
 			include("view/vuutiset.php");
 		}
 	}
-
+	
 	//MEDIA
 	else if ($_GET['osio'] == mediat) {
-		include("media.php");
+		//include("media.php");
+		include("view/vmedia.php");
 	}
+	
 
 	//MERCHANDISE
 	else if ($_GET['osio'] == merchandise) {
@@ -68,3 +70,4 @@
 	<script src="<?php echo SITE_ROOT; ?>assets/js/app.js"></script>
 	</body>
 </html>
+
