@@ -65,7 +65,7 @@
          }
       }
       ?>
-      <h3 class="sininen">Kommentoi</h3>
+      <a name=kommentoi><h3 class="sininen">Kommentoi</h3></a>
       <?php
       if($_SESSION['taso']>1) {
       ?>

@@ -14,18 +14,19 @@
    ?>
 
    <?php
+   $limit=10;
    foreach(array_reverse($uutiset) as $uutinen){
       $i++;
-      if ($i>10) {
+      if ($i>$limit) {
          break;
       } else {
    ?>
          <section class="uutinen">
             <article class="main-content">
-               <a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>"><h3><?php echo($uutinen->otsikko);?></h3></a>
+               <h3><a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->otsikko);?></a></h3>
                <p><?php echo($uutinen->teksti);?></p>
                <p class="pvm"><?php echo($uutinen->pvm);?>
-               <a href="#">Kommentoi</a>
+               <a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>#kommentoi">Kommentoi</a>
                <a href="#">Jaa</a>
                <?php
                if($_SESSION['taso']>2) {
@@ -43,5 +44,6 @@
       }
    }
    ?>
-   <a href="#">Näytä useampia</a>
+   <a name="showmore" href="<?php echo(SITE_ROOT)?>uutiset">Näytä useampia</a>
+   <?php echo($limit);?>
 </div>
