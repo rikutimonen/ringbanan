@@ -8,23 +8,10 @@
    <?php
    if($_SESSION['taso']>2) {
    ?>
-   <div class="artikkeli-kirjoitus">
-      <h3 class="sininen">Luo uusi artikkeli</h3>
-      <p>
-         <?php echo("Asd");?>
-         <?php echo($_SESSION['taso']);?>
-      </p>
-      <form action="<?php echo(SITE_ROOT)?>model/mnewsAddArticle.php" class="uutisen-luonti" method="post" id="create-article-form-<?php echo($uutinen->uutisID);?>">
-         <input type="text" name="otsikko" placeholder="Otsikko">
-         <br><br>
-         <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="create-article-form-<?php echo($uutinen->uutisID);?>"></textarea>
-         <br>
-         <input type="submit" value="Luo artikkeli" class="orange button">
-      </form>
-      <?php
-      }
-      ?>
-   </div>
+      <a href="<?php echo(SITE_ROOT)?>uutiset/uusi_artikkeli/luo"><button type="button" name="button" class="button orange">Luo uusi artikkeli</button></a>
+   <?php
+   }
+   ?>
 
    <?php
    foreach($uutiset as $uutinen){

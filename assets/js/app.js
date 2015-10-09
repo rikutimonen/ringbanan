@@ -73,7 +73,7 @@
  //// kaikki vaikka docreadyn sisään////
 ///////////////////////////////////////
 docReady(function() {
-	
+
 //fadeout/in
 var open_modals = document.getElementsByClassName('open-modal');
 var close_modals = document.getElementsByClassName('close-modal');
@@ -141,3 +141,18 @@ var fadeOut = function(element){
 
 
 });
+
+var toggle_hidden = document.getElementsByClassName('toggle-hidden');
+for (var i = 0; i < toggle_hidden.length; i++) {
+   toggle_hidden[i].addEventListener('click', function(evt) {
+      evt.preventDefault();
+      var target = this.getAttribute('data-target');
+      var element = document.getElementById(target);
+
+      if (element.style.display == 'none') {
+         element.style.display = 'block';
+      } else {
+         element.style.display = 'none';
+      }
+   });
+}

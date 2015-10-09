@@ -12,25 +12,26 @@
          <p class="pvm"><?php echo($uutinen->pvm);?>
       </article>
    </section>
-   <hr>
 
    <?php
    if($_SESSION['taso']>2) {
    ?>
-   <div class="artikkeli-kirjoitus">
-      <h3 class="sininen">Muokkaa artikkelia</h3>
-      <form action="<?php echo(SITE_ROOT)?>model/mnewsModifyArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" class="uutisen-muokkaus" method="post" id="modify-article-form-<?php echo($uutinen->uutisID);?>">
-         <input type="text" name="otsikko" placeholder="Otsikko" value="<?php echo($uutinen->otsikko);?>">
-         <br><br>
-         <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="modify-article-form-<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->teksti);?></textarea>
-         <br>
-         <input type="submit" value="Tallenna muutokset" class="orange button">
-      </form>
+      <button type="button" name="button" class="button toggle-hidden orange" data-target="artikkeli-muokkaus">Muokkaa</button>
       <hr>
-      <?php
-      }
-      ?>
-   </div>
+      <div id="artikkeli-muokkaus" style="display: none;">
+         <h3 class="sininen">Muokkaa artikkelia</h3>
+         <form action="<?php echo(SITE_ROOT)?>model/mnewsModifyArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" class="uutisen-muokkaus" method="post" id="modify-article-form-<?php echo($uutinen->uutisID);?>">
+            <textarea rows="2" cols="100" name="otsikko" placeholder="Otsikko" form="modify-article-form-<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->otsikko);?></textarea>
+            <br>
+            <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="modify-article-form-<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->teksti);?></textarea>
+            <br>
+            <input type="submit" value="Tallenna muutokset" class="orange button">
+         </form>
+         <hr>
+      </div>
+   <?php
+   }
+   ?>
 
    <section class="kommentit">
       <h3 class="sininen">Kommentit</h3>
@@ -71,9 +72,9 @@
          $_SESSION['userid'] = 1;
       ?>
       <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleAddComment.php" class="kommentti" method="post" id="commentform-<?php echo($uutinen->uutisID);?>">
-         <input type="text" name="otsikko" placeholder="Otsikko">
-         <br><br>
-         <textarea rows="8" cols="100" name="teksti" placeholder="Kirjoita tähän" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>
+         <textarea rows="1" cols="80" name="otsikko" placeholder="Otsikko" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>
+         <br>
+         <textarea rows="8" cols="80" name="teksti" placeholder="Kirjoita tähän" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>
          <br>
          <input type="submit" value="Kommentoi" class="orange button" data-uutisid="<?php echo($uutinen->uutisID);?>">
       </form>

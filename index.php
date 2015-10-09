@@ -7,31 +7,34 @@
 
 	//Navigaatio, joka näkyy jokaisella sivulla
 	include("includes/iheader.php");
-	
-		//UUTISET	
-	if ( $_GET ['osio'] == uutiset){
-		if (isset($_GET['uutisid'])) {
+
+		//UUTISET
+	if ($_GET['osio'] == uutiset){
+		if (isset($_GET['uutisid']) && empty($_GET['toiminto'])) {
 			include("view/vuutinen.php");
-			}
+		}
+		elseif ($_GET['uutisid'] == uusi_artikkeli && $_GET['toiminto'] == luo) {
+			include("view/vuutisLuonti.php");
+		}
 		else {
-			   include("view/vuutiset.php");
-			}
+			include("view/vuutiset.php");
+		}
 	}
-	
+
 	//MEDIA
 	else if ($_GET['osio'] == mediat) {
 		include("media.php");
 	}
-	
+
 	//MERCHANDISE
 	else if ($_GET['osio'] == merchandise) {
 		include("includes/iproduct.php");
 	}
-		//DISCUSSION	
+		//DISCUSSION
 	else if ($_GET['osio'] == discussion) {
 		//nclude("media.php");
 	}
-	
+
 	//// 	 REKISTERÖINTI 		 /////
 	else if ($_GET['osio'] == register) {
 		require_once('view/vrekisteroi.php');
@@ -44,12 +47,12 @@
 	else if ($_GET['osio'] == tallennakayttaja) {
 		require_once('save_user.php');
 	}
-	
+
 	////  LOGIN	/////
 	else if ($_GET['osio'] == login) {
 		require_once('login.php');
 	}
-	
+
 	//Heitä pääsivulle jos mikätahansa muu pääte sivulla
 	else {
 
@@ -65,7 +68,3 @@
 	<script src="<?php echo SITE_ROOT; ?>assets/js/app.js"></script>
 	</body>
 </html>
-			
-				
-			
-			

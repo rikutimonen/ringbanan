@@ -29,6 +29,10 @@ body {
 	background-color: #068cb8;
 }
 
+.red {
+	background-color: #dd1717;
+}
+
 .soundcloud-player{
 	text-align: center;
 	margin-top: 48px;
@@ -66,8 +70,8 @@ body {
     font-weight: bold;
 }
 
-.gallery { 
-	text-align: center; 
+.gallery {
+	text-align: center;
 }
 .current-image-wrapper {
 	background-position: 50% 50%;
@@ -90,8 +94,8 @@ body {
 	height: 3em;
 	border: none;
 }
-.thumbnails a { 
-	outline: none; 
+.thumbnails a {
+	outline: none;
 }
 
 
@@ -193,7 +197,7 @@ body {
 	padding-bottom: 1em;
 }
 .audio-player p{
-	
+
 	margin: 0px;
 	color: #068CB8;
 	float: right;
@@ -260,9 +264,9 @@ body {
 	color: rgb(236,240,241);
 	padding: 6px 10px;
 	text-decoration: none;
-	
+
 }
-	
+
 footer {
 	color:rgb(237,240,241);
 	float: left;
@@ -271,7 +275,7 @@ footer {
 	padding: 1em 0;
 	margin-top: 1em;
 	}
-	
+
 .valittu {
 	color: rgb(232,77,59) !important;
 	font-weight: bold;
@@ -314,7 +318,7 @@ footer {
 .media-section .mediasisalto {
     display: none;
     padding : 10px;
-	
+
 }
 .main-container{
 	color: #282929;
@@ -340,7 +344,7 @@ footer {
 	float: left;
 
 }
-	
+
 .tuote p {
 	font-family: 'Roboto', sans-serif;
 	margin: 1em 0;
@@ -349,7 +353,7 @@ footer {
 
 .tuote-nav {
 	width: 100%;
-	position: relative; 
+	position: relative;
 	float: left;
 
 
@@ -408,7 +412,7 @@ footer {
 	color: #000;
 	display:inline-block;
 	width: 100%;
-} 
+}
 /* END*/
 
 
@@ -520,7 +524,7 @@ footer {
 }
 
 #pButton{
-	height:70px; 
+	height:70px;
 	width: 70px;
 	border: none;
 	right: 35px;
@@ -532,7 +536,7 @@ footer {
 }
 .play{
 	background: url('../img/play.png') no-repeat;
-		
+
 }
 
 .pause{
