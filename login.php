@@ -20,6 +20,7 @@ if(!$user){
 	//Jos k�ytt�j� tunnistettiin, talletetaan tiedot sessioon esim. kassalle siirtymist�
 	//varten on hyv� tiet�� asiakastiedot
 	$_SESSION['kirjautunut'] = 'jep';
+	$_SESSION['userid'] = $user->userID;
 	$_SESSION['username'] = $user->username;
 	$_SESSION['enimi'] = $user->enimi;
 	$_SESSION['snimi'] = $user->snimi;

@@ -29,6 +29,7 @@ try {
 					$STH3->setFetchMode(PDO::FETCH_OBJ);
 					$user = $STH3->fetch();
 					$_SESSION['kirjautunut'] = 'logged in';
+					$_SESSION['userid'] = $user->userID;
 					$_SESSION['username'] = $user->username;
 					$_SESSION['enimi'] = $user->enimi;
 					$_SESSION['snimi'] = $user->snimi;

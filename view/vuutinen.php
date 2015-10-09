@@ -21,9 +21,9 @@
       <div id="artikkeli-muokkaus" style="display: none;">
          <h3 class="sininen">Muokkaa artikkelia</h3>
          <form action="<?php echo(SITE_ROOT)?>model/mnewsModifyArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" class="uutisen-muokkaus" method="post" id="modify-article-form-<?php echo($uutinen->uutisID);?>">
-            <textarea rows="2" cols="100" name="otsikko" placeholder="Otsikko" form="modify-article-form-<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->otsikko);?></textarea>
+            <textarea rows="2" cols="100" name="otsikko" placeholder="Otsikko" form="modify-article-form-<?php echo($uutinen->uutisID);?>" required><?php echo($uutinen->otsikko);?></textarea>
             <br>
-            <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="modify-article-form-<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->teksti);?></textarea>
+            <textarea rows="16" cols="100" name="teksti" placeholder="Kirjoita tähän" form="modify-article-form-<?php echo($uutinen->uutisID);?>" required><?php echo($uutinen->teksti);?></textarea>
             <br>
             <input type="submit" value="Tallenna muutokset" class="orange button">
          </form>
@@ -41,7 +41,7 @@
       <p>Ei kommentteja</p>
       <?php
       } else {
-         foreach($uutiskommentit as $uutiskommentti) {
+         foreach(array_reverse($uutiskommentit) as $uutiskommentti) {
       ?>
             <section class="uutinen">
                <article class="kommentti">
@@ -68,13 +68,11 @@
       <h3 class="sininen">Kommentoi</h3>
       <?php
       if($_SESSION['taso']>1) {
-         $_SESSION['uutisid'] = $uutinen->uutisID;
-         $_SESSION['userid'] = 1;
       ?>
-      <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleAddComment.php" class="kommentti" method="post" id="commentform-<?php echo($uutinen->uutisID);?>">
+      <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleAddComment.php?uutisid=<?php echo($uutinen->uutisID);?>" class="kommentti" method="post" id="commentform-<?php echo($uutinen->uutisID);?>">
          <textarea rows="1" cols="80" name="otsikko" placeholder="Otsikko" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>
          <br>
-         <textarea rows="8" cols="80" name="teksti" placeholder="Kirjoita tähän" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>
+         <textarea rows="8" cols="80" name="teksti" placeholder="Kirjoita tähän" form="commentform-<?php echo($uutinen->uutisID);?>" required></textarea>
          <br>
          <input type="submit" value="Kommentoi" class="orange button" data-uutisid="<?php echo($uutinen->uutisID);?>">
       </form>
