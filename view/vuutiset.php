@@ -1,5 +1,5 @@
 <div class="uutiset">
-   <h2>Uutiset</h2>
+   <h2>News</h2>
    <?php
       include("model/mnews.php");
       // print_r($uutiset);
@@ -14,8 +14,8 @@
    ?>
 
    <?php
-   if(isset($_GET['nayta'])) {
-      $limit=$_GET['nayta'];
+   if(isset($_GET['show'])) {
+      $limit=$_GET['show'];
    } else {
       $limit=10;
    }
@@ -30,8 +30,7 @@
                <h3><a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->otsikko);?></a></h3>
                <p><?php echo($uutinen->teksti);?></p>
                <p class="pvm"><?php echo($uutinen->pvm);?>
-               <a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>#kommentoi">Kommentoi</a>
-               <a href="#">Jaa</a>
+               <a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>#kommentoi">Comment</a>
                <?php
                if($_SESSION['taso']>2) {
                ?>
@@ -48,5 +47,5 @@
       }
    }
    ?>
-   <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&nayta=<?php echo($limit+10);?>#showmore">Näytetään <?php echo($limit);?> artikkelia. Näytä useampia:</a>
+   <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&show=<?php echo($limit+10);?>#showmore">Displaying up to <?php echo($limit);?> articles. Show more:</a>
 </div>

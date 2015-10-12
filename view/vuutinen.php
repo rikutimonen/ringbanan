@@ -5,7 +5,7 @@
    // print_r($uutinen);
    ?>
    <section class="uutinen">
-      <p><a href="<?php echo(SITE_ROOT)?>uutiset"><-- Palaa uutisiin</a></p>
+      <p><a href="<?php echo(SITE_ROOT)?>uutiset"><-- Back to news</a></p>
       <article>
          <h3><?php echo($uutinen->otsikko);?></h3>
          <p><?php echo($uutinen->teksti);?></p>
@@ -34,15 +34,15 @@
    ?>
 
    <section class="kommentit">
-      <h3 class="sininen">Kommentit</h3>
+      <h3 class="sininen">Comments</h3>
       <?php
       if(empty($uutiskommentit)) {
       ?>
-      <p>Ei kommentteja</p>
+      <p>No comments yet.</p>
       <?php
       } else {
-         if(isset($_GET['nayta'])) {
-            $limit=$_GET['nayta'];
+         if(isset($_GET['show'])) {
+            $limit=$_GET['show'];
          } else {
             $limit=20;
          }
@@ -73,11 +73,13 @@
       <?php
             }
          }
+      ?>
+      <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&uutisid=<?php echo($uutinen->uutisID);?>&show=<?php echo($limit+20);?>#showmore">Displaying up to <?php echo($limit);?> comments. Show more:</a>
+      <?php
       }
       ?>
-      <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&uutisid=<?php echo($uutinen->uutisID);?>&nayta=<?php echo($limit+20);?>#showmore">Näytetään <?php echo($limit);?> kommenttia. Näytä useampia:</a>
 
-      <a name=kommentoi><h3 class="sininen">Kommentoi</h3></a>
+      <a name=kommentoi><h3 class="sininen">Comment</h3></a>
 
       <?php
       if($_SESSION['taso']>1) {
@@ -92,7 +94,7 @@
       <?php
       } else {
       ?>
-         <p><a href="#">Kirjaudu sisään kommentoidaksesi</a></p>
+         <p><a href="#" class="open-modal" data-target="log-modal">Log in to comment.</a></p>
       <?php
       }
       ?>
