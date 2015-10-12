@@ -14,7 +14,11 @@
    ?>
 
    <?php
-   $limit=10;
+   if(isset($_GET['nayta'])) {
+      $limit=$_GET['nayta'];
+   } else {
+      $limit=10;
+   }
    foreach(array_reverse($uutiset) as $uutinen){
       $i++;
       if ($i>$limit) {
@@ -44,6 +48,5 @@
       }
    }
    ?>
-   <a name="showmore" href="<?php echo(SITE_ROOT)?>uutiset">Näytä useampia</a>
-   <?php echo($limit);?>
+   <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&nayta=<?php echo($limit+10);?>#showmore">Näytetään <?php echo($limit);?> artikkelia. Näytä useampia:</a>
 </div>

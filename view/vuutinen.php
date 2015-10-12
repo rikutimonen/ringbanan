@@ -41,7 +41,16 @@
       <p>Ei kommentteja</p>
       <?php
       } else {
+         if(isset($_GET['nayta'])) {
+            $limit=$_GET['nayta'];
+         } else {
+            $limit=20;
+         }
          foreach(array_reverse($uutiskommentit) as $uutiskommentti) {
+            $i++;
+            if ($i>$limit) {
+               break;
+            } else {
       ?>
             <section class="uutinen">
                <article class="kommentti">
@@ -62,10 +71,14 @@
             </section>
             <hr>
       <?php
+            }
          }
       }
       ?>
+      <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&uutisid=<?php echo($uutinen->uutisID);?>&nayta=<?php echo($limit+20);?>#showmore">Näytetään <?php echo($limit);?> kommenttia. Näytä useampia:</a>
+
       <a name=kommentoi><h3 class="sininen">Kommentoi</h3></a>
+
       <?php
       if($_SESSION['taso']>1) {
       ?>
