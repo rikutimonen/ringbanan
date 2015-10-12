@@ -54,6 +54,12 @@
 	else if ($_GET['osio'] == login) {
 		require_once('login.php');
 	}
+	
+	////  LOGOUT	/////
+	else if ($_GET['osio'] == logout) {
+		require_once('logout.php');
+	}
+
 
 	//Heitä pääsivulle jos mikätahansa muu pääte sivulla
 	else {

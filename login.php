@@ -9,7 +9,7 @@ SSLon();
 //user oliossa kayttajatiedot jos ok, muuten false
 
 $user = login($_POST['email'], $_POST['pwd'], $DBH);
-print_r($_POST['email'] . $_POST['pwd']);
+//print_r($_POST['email'] . $_POST['pwd']);
 if(!$user){
 	$_SESSION['loggausvirhe'] = 'jep';
 	print_r("ei useria");
@@ -19,7 +19,7 @@ if(!$user){
 	unset($_SESSION['loggausvirhe']);
 	//Jos k�ytt�j� tunnistettiin, talletetaan tiedot sessioon esim. kassalle siirtymist�
 	//varten on hyv� tiet�� asiakastiedot
-	$_SESSION['kirjautunut'] = 'jep';
+	$_SESSION['kirjautunut'] = true;
 	$_SESSION['userid'] = $user->userID;
 	$_SESSION['username'] = $user->username;
 	$_SESSION['enimi'] = $user->enimi;

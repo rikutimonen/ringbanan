@@ -28,7 +28,7 @@ try {
 					$STH3 = $DBH->query($sql);
 					$STH3->setFetchMode(PDO::FETCH_OBJ);
 					$user = $STH3->fetch();
-					$_SESSION['kirjautunut'] = 'logged in';
+					$_SESSION['kirjautunut'] = true;
 					$_SESSION['userid'] = $user->userID;
 					$_SESSION['username'] = $user->username;
 					$_SESSION['enimi'] = $user->enimi;

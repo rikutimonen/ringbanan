@@ -12,6 +12,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
 		<link href="<?php echo(SITE_ROOT);?>assets/css/fonts/foundation-icons.css" rel="stylesheet">
 		<link href="<?php echo(SITE_ROOT);?>assets/css/app.css" rel="stylesheet">
+		<link href="<?php echo(SITE_ROOT);?>assets/css/banner.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="<?php echo(SITE_ROOT);?>assets/slick/slick.css">
 	</head>
 
@@ -25,9 +26,16 @@
 						<li><a href="<?php echo(SITE_ROOT);?>mediat">MEDIA</a></li>
 						<li><a href="<?php echo(SITE_ROOT);?>uutiset">NEWS</a></li>
 						<li><a href="<?php echo(SITE_ROOT);?>merchandise">MERCHANDISE</a></li>
-						<li><a href="<?php echo(SITE_ROOT);?>discussion">DISCUSSION</a></li>
 						<li><a href="#" id="cart-button" class="open-modal" data-target="cart-modal">OSTOSKORI</a></li>
-						<li><a href="#" id="check" class="open-modal" data-target="log-modal">login<i class="fi-check large"></i><i class="fi-torso large"></i></a></li>
+						
+						<?php if($_SESSION['kirjautunut']){
+						echo('<li><a href="'.SITE_ROOT.'logout">LOG OUT</a></li>');
+
+						}
+						else{
+							echo('
+							<li><a href="#" id="check" class="open-modal" data-target="log-modal">login<i class="fi-check large"></i><i class="fi-torso large"></i></a></li>');
+						}?>
 					</ul>
 				</nav>
 				<div class="cart" id="cart-modal" style="opacity: 0; display: none;">
