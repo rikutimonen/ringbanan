@@ -79,17 +79,17 @@
       }
       ?>
 
-      <a name=kommentoi><h3 class="sininen">Comment</h3></a>
+      <a name=comment><h3 class="sininen">Comment</h3></a>
 
       <?php
       if($_SESSION['taso']>1) {
       ?>
       <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleAddComment.php?uutisid=<?php echo($uutinen->uutisID);?>" class="kommentti" method="post" id="commentform-<?php echo($uutinen->uutisID);?>">
-         <textarea rows="1" cols="80" name="otsikko" placeholder="Otsikko" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>
+         <textarea rows="1" cols="80" name="otsikko" placeholder="Title" form="commentform-<?php echo($uutinen->uutisID);?>"></textarea>
          <br>
-         <textarea rows="8" cols="80" name="teksti" placeholder="Kirjoita tähän" form="commentform-<?php echo($uutinen->uutisID);?>" required></textarea>
+         <textarea rows="8" cols="80" name="teksti" placeholder="Type here" form="commentform-<?php echo($uutinen->uutisID);?>" required></textarea>
          <br>
-         <input type="submit" value="Kommentoi" class="orange button" data-uutisid="<?php echo($uutinen->uutisID);?>">
+         <input type="submit" value="Comment" class="orange button" data-uutisid="<?php echo($uutinen->uutisID);?>">
       </form>
       <?php
       } else {

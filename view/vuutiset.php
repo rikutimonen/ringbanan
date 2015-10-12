@@ -30,7 +30,7 @@
                <h3><a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->otsikko);?></a></h3>
                <p><?php echo($uutinen->teksti);?></p>
                <p class="pvm"><?php echo($uutinen->pvm);?>
-               <a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>#kommentoi">Comment</a>
+               <a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>#comment">Comment</a>
                <?php
                if($_SESSION['taso']>2) {
                ?>
