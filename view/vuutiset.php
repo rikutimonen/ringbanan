@@ -30,7 +30,7 @@
                <h3><a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>"><?php echo($uutinen->otsikko);?></a></h3>
                <p><?php echo($uutinen->teksti);?></p>
                <p class="pvm"><?php echo($uutinen->pvm);?>
-               <a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>#comment">Comment</a>
+               <p><a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>#comment">Comment</a></p>
                <?php
                if($_SESSION['taso']>2) {
                ?>
@@ -46,6 +46,10 @@
       <?php
       }
    }
+   if(sizeof($uutiset)>$limit) {
    ?>
    <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&show=<?php echo($limit+10);?>#showmore">Displaying up to <?php echo($limit);?> articles. Show more:</a>
+   <?php
+   }
+   ?>
 </div>

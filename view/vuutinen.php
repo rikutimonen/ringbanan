@@ -73,9 +73,11 @@
       <?php
             }
          }
+         if(sizeof($uutiskommentit)>$limit) {
       ?>
       <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&uutisid=<?php echo($uutinen->uutisID);?>&show=<?php echo($limit+20);?>#showmore">Displaying up to <?php echo($limit);?> comments. Show more:</a>
       <?php
+         }
       }
       ?>
 
