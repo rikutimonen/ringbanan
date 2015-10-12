@@ -61,7 +61,7 @@
                   <?php
                   if($_SESSION['taso']>2) {
                   ?>
-                     <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleDeleteComment.php?kommenttiid=<?php echo($uutiskommentti->kommenttiid);?>&uutisid=<?php echo($uutinen->uutisID);?>" method="post">
+                     <form action="<?php echo(SITE_ROOT)?>model/mnewsArticleDeleteComment.php?kommenttiid=<?php echo($uutiskommentti->kommenttiid);?>&uutisid=<?php echo($uutinen->uutisID);?>" method="post" class="delete-form">
                         <input type="submit" value="Poista kommentti" class="red button" data-uutisid="<?php echo($uutiskommentti->k_uutisID);?>">
                      </form>
                   <?php

@@ -156,3 +156,37 @@ for (var i = 0; i < toggle_hidden.length; i++) {
       }
    });
 }
+
+var delete_forms = document.getElementsByClassName("delete-form");
+function confirmDelete() {
+  if (confirm("Oletko varma että haluat poistaa valitun?")) {
+     for (var i = 0; i < delete_forms.length; i++) {
+       delete_forms[i].submit();
+     }
+  }
+  return false;
+}
+
+for (var i = 0; i < delete_forms.length; i++) {
+   delete_forms[i].addEventListener('submit', function(evt) {
+      evt.preventDefault();
+      confirmDelete();
+   });
+}
+
+var modify_forms = document.getElementsByClassName("uutisen-muokkaus");
+function confirmModify() {
+  if (confirm("Oletko varma että haluat muokata artikkelia?")) {
+     for (var i = 0; i < modify_forms.length; i++) {
+       modify_forms[i].submit();
+     }
+  }
+  return false;
+}
+
+for (var i = 0; i < modify_forms.length; i++) {
+   modify_forms[i].addEventListener('submit', function(evt) {
+      evt.preventDefault();
+      confirmModify();
+   });
+}
