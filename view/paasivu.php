@@ -1,13 +1,5 @@
 <div class="paasivu">
 					<div class="main-container">
-					<section class="main-content">
-							<h2>Otsikko</h2>
-							<p>Suomessa tai bataattia sipseiksi eurooppalaisissa opiskelijaruokalan potaatti syövät maa-aineksen kuitenkin sitä perunaa kielissä sialla. Oltava karjalassa kielessä kaljaviestijoukkueen eli tai omena sisältä eurooppalaisissa andeilla koossa</p>
-						<div id="checkout"><a href="#" class="orange button">Read more</a></div>
-						</article>
-					</section>
-					</div>
-					<div class="main-container">
 						<section class="main-content">
 							<h2>Latest news:</h2>
 							<br>
@@ -25,8 +17,8 @@
 					                  <br>
 					                  <p>
 											<?php
-												echo(substr($uutinen->teksti, 0, 500));
-												if(strlen($uutinen->teksti)>500){
+												echo(substr(strip_tags($uutinen->teksti, '<br><a><h4>'), 0, 500));
+												if(strlen(strip_tags($uutinen->teksti, '<br><a><h4>'))>500){
 											?>
 											<a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>">...Read more</a>
 											<?php
