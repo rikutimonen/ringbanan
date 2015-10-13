@@ -26,9 +26,10 @@
 						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>mediat">MEDIA</a></li>
 						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>uutiset">NEWS</a></li>
 						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>merchandise">MERCHANDISE</a></li>
-						<li class="normal_li"><a href="#" id="cart-button" class="open-modal" data-target="cart-modal">OSTOSKORI</a></li>
+						
 						
 						<?php if($_SESSION['kirjautunut']){
+						echo('<li class="normal_li"><a href="#" id="cart-button" class="open-modal" data-target="cart-modal">CART</a></li>');
 						echo('<li class="logout_css"><a href="'.SITE_ROOT.'logout">LOG OUT</a></li>');
 
 						}

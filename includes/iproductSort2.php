@@ -2,7 +2,7 @@
 
 
 					<?php
-					   if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
+					   if($_SESSION['taso']>2) { 
 					   ?>
 					   <h3 class="punainen button">Add a product</h3>
 					   <form action="model/mAddProduct.php" class="uutisen-luonti" method="post" id="create-article-form-<?php echo($product->tID);?>">
