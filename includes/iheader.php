@@ -46,6 +46,8 @@
 					<div id="checkout">
 						<a href="<?php echo(SITE_ROOT."kassa");?>" class="sininen button">Checkout</a>
 					</div>
+				<div id="empty-cart">
+					<a href="#" class="punainen button">Empty Cart</a>
 				
 				
 				
