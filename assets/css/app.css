@@ -339,6 +339,16 @@ footer {
 	padding: 1em;
 }
 
+.main-content p{
+	font-family: Verdana;
+	font-size: 0.9em;
+}
+
+.main-content a{
+	color: #464646;
+	text-decoration: none;
+}
+
 .tuote {
 
 }

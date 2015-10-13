@@ -28,7 +28,7 @@
 												echo(substr($uutinen->teksti, 0, 500));
 												if(strlen($uutinen->teksti)>500){
 											?>
-											<a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>">... Read more</a>
+											<a href="<?php echo(SITE_ROOT)?>uutiset/<?php echo($uutinen->uutisID);?>">...Read more</a>
 											<?php
 												}
 											?>

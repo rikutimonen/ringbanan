@@ -60,8 +60,8 @@
                   <article class="kommentti">
                      <div class="posted-by">Posted by: <a href="#"><?php echo($uutiskommentti->username);?></a></div>
                      <br>
-                     <h4><?php echo($uutiskommentti->otsikko);?></h4>
-                     <p><?php echo($uutiskommentti->teksti);?></p>
+                     <h4><?php echo(strip_tags($uutiskommentti->otsikko));?></h4>
+                     <p><?php echo(strip_tags($uutiskommentti->teksti));?></p>
                      <br>
                      <p class="pvm"><?php echo($uutiskommentti->pvm);?></p>
                      <?php
