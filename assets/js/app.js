@@ -151,9 +151,6 @@ var fadeOut = function(element){
   }
 }
 
-
-});
-
 var toggle_hidden = document.getElementsByClassName('toggle-hidden');
 for (var i = 0; i < toggle_hidden.length; i++) {
    toggle_hidden[i].addEventListener('click', function(evt) {
@@ -286,4 +283,8 @@ document.getElementById('empty-cart').addEventListener('click', function(evt){
 //3.c) ****** päivitetään ostosten lkm sivua ladattaessa uudelleen 23.9
 //showCart();
 addToCart();
+
+
+
+});
 

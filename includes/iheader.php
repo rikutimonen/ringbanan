@@ -39,9 +39,18 @@
 					</ul>
 				</nav>
 				<div class="cart" id="cart-modal" style="opacity: 0; display: none;">
-					<href="#" class="close-modal">x</a>
-					<?php include("includes/iostoskori.php"); ?>
+					<a href="#" class="close-modal">x</a>
+					<div id="kori">
+						Cart        
+					</div>
+					<div id="checkout">
+						<a href="<?php echo(SITE_ROOT."kassa");?>" class="sininen button">Checkout</a>
+					</div>
+				<div id="empty-cart">
+					<a href="#" class="punainen button">Empty Cart</a>
 				</div>
+				</div>
+				
 				
 				
 				
