@@ -29,34 +29,57 @@
 					include("model/mmedia.php");
 				  //print_r($images);
 				?>
+				
 				<div class="media-section">
 				<div class="header">
 					<h2>Image gallery</h2>
 				</div>
 					<div class="mediasisalto">
+					
+
+     <?php if($_SESSION['taso']>2){ 
+ ?>
+   <div>
+      <h3 class="sininen">Add new image</h3>
+        <form method="post" action="<?php echo(SITE_ROOT)?>model/mmediaAddImage.php" enctype="multipart/form-data">
+			<textarea rows="2" cols="100" name="otsikko" placeholder="Otsikko" required></textarea>
+			 <br>
+			 <textarea rows="16" cols="100" name="kuvaus" placeholder="Kirjoita tähän" required></textarea>
+            <p>
+              Image:
+            </p>
+            <input type="hidden" name="size" value="35000000">
+            <input type="file" name="photo"> 
+            <input TYPE="submit" name="upload" title="Add data to the Database" value="Add Image" class="orange button"/>
+          </form>
+	 </div>
+	 <?php 
+	 } 
+	 ?>
+					
 						<div id='gallery' class='gallery'>
 						  <div id='lg-wrap' class='current-image-wrapper'>
-							<img id='large' data-idx='<?php echo($image->imgID);?>' src='<?php echo(SITE_ROOT)?>assets/img/gallery/leikkikuva1.jpg'>
+							<img id='large' data-idx='<?php echo($image->imgID);?>' src='<?php echo(SITE_ROOT)?>assets/img/gallery/<?php echo($images[1]->kuva);?>'>
 						  </div>
 						  <ul id='thumbnails' class='thumbnails'>
 						     <?php
 							   foreach($images as $image){
 							   ?>
-							<li>
-							  <a href='<?php echo(SITE_ROOT)?>assets/img/gallery/<?php echo($image->kuva);?>'>
-								<?php print_r($image->kuvaID); ?>
-								<img data-idx='<?php echo($image->kuvaID);?>' src='<?php echo(SITE_ROOT)?>assets/img/gallery/<?php echo($image->kuva);?>'>
-							  </a>
-							</li>
-							<li>	
+								<li>
+								  <a href='<?php echo(SITE_ROOT)?>assets/img/gallery/<?php echo($image->kuva);?>'>	
+									<img data-idx='<?php echo($image->kuvaID);?>' src='<?php echo(SITE_ROOT)?>assets/img/gallery/<?php echo($image->kuva);?>'>
+								  </a>
+								</li>
 							   <?php } ?>
 						  </ul>
 						</div>
 					</div>
 			</div>
 		</div>
+		
 			<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 			<script>
+				//Kuvagallerian scriptit
 				var th = document.getElementById('thumbnails');
 				th.addEventListener('click', function(e) {
 				  var t = e.target, new_src = t.parentNode.href, 
@@ -72,6 +95,7 @@
 				  e.preventDefault();
 				}, false);
 				
+				//Aukeavien mediaosioiden scriptit
 				$(".header").click(function () {
 					$header = $(this);
 					//getting the next element
