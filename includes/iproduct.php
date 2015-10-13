@@ -1,6 +1,5 @@
 			
 
-			<div id="sivu">
 
 				<nav class="tuote-nav">
 						<ul>
@@ -39,5 +38,3 @@
 							  ?>
 
 				</div>
-
-			</div>

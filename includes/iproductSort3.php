@@ -1,6 +1,5 @@
 			
 
-			<div id="sivu">
 
 					<?php
 					   if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
@@ -57,9 +56,3 @@
 							  ?>
 
 				</div>
-
-			</div>>
-
-				</div>
-
-			</div>

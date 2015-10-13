@@ -1,6 +1,5 @@
 			
 
-			<div id="sivu">
 
 					<?php
 					   if(/*$_SESSION['taso']>2*/ 1>0) { // *** PLACEHOLDER
@@ -55,16 +54,6 @@
 
 				</div>
 
-			</div>			  <?php
 
-									require_once('model/mproductsSort2.php');
-							
-								    //Kysely päivittää taulukkoon $tuotteet tuoteolioita
-							  		foreach($products as $product){
-							          	tulostaTuote($product);
-									}
-							  ?>
 
-				</div>
 
-			</div>
