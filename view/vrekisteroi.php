@@ -26,21 +26,21 @@
     <?php
 	else:
 	?>
-	<input type="text" name="data[username]" placeholder="Username" username><span>* Username</span>
+	<input type="text" name="data[username]" placeholder="Username" required><span>* Username</span>
     <br>
-	<input type="text" name="data[enimi]" placeholder="Forename" enimi><span>* Forename</span>
+	<input type="text" name="data[enimi]" placeholder="Forename"><span>Forename</span>
     <br>
-	<input type="text" name="data[snimi]" placeholder="Surname" snimi><span>* Surname</span>
+	<input type="text" name="data[snimi]" placeholder="Surname"><span>Surname</span>
     <br>
-	<input type="email" name="data[email]" placeholder="Email" email><span>* Email</span>
+	<input type="email" name="data[email]" placeholder="Email" required><span>* Email</span>
     <br>
-	<input type="tel" name="data[puhnro]" placeholder="Phone number" puhnro><span>* Phone number</span>
+	<input type="tel" name="data[puhnro]" placeholder="Phone number"><span>Phone number</span>
     <br>
-	<input type="number" name="data[postinro]" placeholder="Postal code" postinro><span>* Postal code</span>
+	<input type="number" name="data[postinro]" placeholder="Postal code"><span>Postal code</span>
     <br>
-	<input type="text" name="data[kaupunki]" placeholder="City" kaupunki><span>* City</span>
+	<input type="text" name="data[kaupunki]" placeholder="City"><span>City</span>
     <br>
-	<input type="text" name="data[osoite]" placeholder="Address" osoite><span>* Address</span>
+	<input type="text" name="data[osoite]" placeholder="Address"><span>Address</span>
     <br>
     <?php
 	endif;
