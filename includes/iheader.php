@@ -21,7 +21,8 @@
 			<header class="main-header dark-gray">
 				<nav class="top-nav">
 					<ul>
-						<li><a href="<?php echo(SITE_ROOT);?>">HOME</a></li>
+						<li><img="<?php echo(SITE_ROOT);?>assets/img/badger_100x100_trans.png" href="<?php echo(SITE_ROOT);?>"></img></li>
+						<!---<li><a href="<?php echo(SITE_ROOT);?>">HOME</a></li>--->
 						<li><a href="<?php echo(SITE_ROOT);?>mediat">MEDIA</a></li>
 						<li><a href="<?php echo(SITE_ROOT);?>uutiset">NEWS</a></li>
 						<li><a href="<?php echo(SITE_ROOT);?>merchandise">MERCHANDISE</a></li>
