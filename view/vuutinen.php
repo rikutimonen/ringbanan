@@ -12,7 +12,7 @@
             <br>
             <p><?php echo($uutinen->teksti);?></p>
             <br>
-            <p class="pvm"><?php echo($uutinen->pvm);?>
+            <div class="pvm"><?php echo($uutinen->pvm);?>
             <hr>
          </article>
       </section>
@@ -63,7 +63,7 @@
                      <h4><?php echo(strip_tags($uutiskommentti->otsikko));?></h4>
                      <p><?php echo(strip_tags($uutiskommentti->teksti));?></p>
                      <br>
-                     <p class="pvm"><?php echo($uutiskommentti->pvm);?></p>
+                     <div class="pvm"><?php echo($uutiskommentti->pvm);?></div>
                      <?php
                      if($_SESSION['taso']>2) {
                      ?>
