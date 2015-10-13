@@ -32,6 +32,19 @@
 	else if ($_GET['osio'] == merchandise) {
 		include("includes/iproduct.php");
 	}
+
+	else if ($_GET['osio'] == Apparel) {
+		include("includes/iproductSort1.php");
+	}
+
+	else if ($_GET['osio'] == Accessories) {
+		include("includes/iproductSort2.php");
+	}
+
+	else if ($_GET['osio'] == Misc) {
+		include("includes/iproductSort3.php");
+	}
+
 		//DISCUSSION
 	else if ($_GET['osio'] == discussion) {
 		//nclude("media.php");
