@@ -37,14 +37,17 @@
 	}
 
 	else if ($_GET['osio'] == Apparel) {
+		include("includes/icontainer.php");
 		include("includes/iproductSort1.php");
 	}
 
 	else if ($_GET['osio'] == Accessories) {
+		include("includes/icontainer.php");
 		include("includes/iproductSort2.php");
 	}
 
 	else if ($_GET['osio'] == Misc) {
+		include("includes/icontainer.php");
 		include("includes/iproductSort3.php");
 	}
 

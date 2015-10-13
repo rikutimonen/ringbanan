@@ -125,6 +125,7 @@ body {
 }
 
 .top-nav {
+	height: 40px;
 	float: left;
 	width: 62.5em;
 }
@@ -399,7 +400,7 @@ footer {
 
 .tuote-nav {
 	width: 100%;
-	position: relative;
+	/*position: relative;*/
 	float: left;
 
 
@@ -410,12 +411,12 @@ footer {
 }
 
 .tuote-nav li {
-	padding: 0 10px;
+	padding: 0 0px;
 	float: left;
 	display: inline-block;
 	width: 10em;
 	text-align: center;
-	border-radius: 0.5em 0.5em 0 0;
+	/*border-radius: 0.5em 0.5em 0 0;*/
 	border-right: #fff 1px solid;
 	border-top: #fff 1px solid;
 	border-left: #fff 1px solid;
@@ -465,15 +466,15 @@ footer {
 .cart {
 	position: relative;
 	width: 36em;
-	float: right;
-	color: rgb(236,240,241);
-	font-size: 0.8em;
+	float: left;
+	background-color: rgba(236,240,241,0.9);
+	font-size: 0.9em;
 	padding: 2em;
-	border: #666 1px solid;
+	/*border: #666 1px solid;*/
 }
 
 .cart a {
-	color: rgb(236,240,241);
+	color: rgb(5,8,10);
 }
 
 .sCart {
