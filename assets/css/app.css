@@ -116,6 +116,7 @@ body {
 	position: fixed;
 	float: left;
 	height: 40px;
+	width: 1002px;
 	z-index: 100;
 }
 
@@ -387,7 +388,8 @@ footer {
 }
 
 .main-content a{
-	color: #464646;
+	/*en tiedä muuttaako mitään */
+	/*color: #464646;*/
 	text-decoration: none;
 }
 
@@ -474,12 +476,13 @@ footer {
 
 
 .cart {
-	position: relative;
+	/*position: relative;*/
 	width: 36em;
-	float: left;
-	background-color: rgba(236,240,241,0.9);
+	float: right;
+	background-color: rgba(246,250,251,0.95);
 	font-size: 0.9em;
 	padding: 2em;
+	margin: auto;
 	/*border: #666 1px solid;*/
 }
 
@@ -516,8 +519,8 @@ footer {
 #kori input {
 	float: left;
 	text-align: center;
-	border-radius: 6px;
-	border: 0;
+	border-radius: 1px;
+	border: 1;
 	margin: 4px;
 }
 
@@ -621,11 +624,17 @@ footer {
 }
 
 .comment-link {
+	padding-right: 6px;
+	
+	line-height: 15px;
+	font-size: 1.3em;
 	float: right;
-	color: #282929;
+	color: #000000;
 	text-decoration: none;
 }
-
+.comment-link:hover{
+	color: #aaaaaa;
+}
 .article-title a{
 	color: #000000;
 	text-decoration: none;
