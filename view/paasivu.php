@@ -36,7 +36,7 @@
 					         }
 					      }
 							?>
-							<a href="<?php echo(SITE_ROOT)?>uutiset">Go to the news section<a>
+							<a href="<?php echo(SITE_ROOT)?>uutiset">Go to the news section</a>
 						</section>
 					</div>
 
