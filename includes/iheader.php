@@ -22,7 +22,7 @@
 				<nav class="top-nav">
 					<ul>
 						<li><img="<?php echo(SITE_ROOT);?>assets/img/badger_100x100_trans.png" href="<?php echo(SITE_ROOT);?>"></img></li>
-						<!---<li><a href="<?php echo(SITE_ROOT);?>">HOME</a></li>--->
+						<!---<li><a href="<?php echo(SITE_ROOT);?>">HOME</a></li>-->
 						<li><a href="<?php echo(SITE_ROOT);?>mediat">MEDIA</a></li>
 						<li><a href="<?php echo(SITE_ROOT);?>uutiset">NEWS</a></li>
 						<li><a href="<?php echo(SITE_ROOT);?>merchandise">MERCHANDISE</a></li>
@@ -39,9 +39,13 @@
 					</ul>
 				</nav>
 				<div class="cart" id="cart-modal" style="opacity: 0; display: none;">
-					<href="#" class="close-modal">x</a>
-					<?php include("includes/iostoskori.php"); ?>
-				</div>
+					<a href="#" class="close-modal">x</a>
+					<div id="kori">
+						Cart        
+					</div>
+					<div id="checkout">
+						<a href="<?php echo(SITE_ROOT."kassa");?>" class="sininen button">Checkout</a>
+					</div>
 				
 				
 				
