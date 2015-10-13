@@ -25,7 +25,7 @@ body {
 }
 
 .orange {
-	background-color: #464468;
+	background-color: #D16500;
 }
 
 .blue {
@@ -33,7 +33,7 @@ body {
 }
 
 .red {
-	background-color: #530303;
+	background-color: #dd1717;
 }
 
 .soundcloud-player{
@@ -116,7 +116,6 @@ body {
 	position: fixed;
 	float: left;
 	height: 40px;
-	width: 1002px;
 	z-index: 100;
 }
 
@@ -126,7 +125,6 @@ body {
 }
 
 .top-nav {
-	height: 40px;
 	float: left;
 	width: 62.5em;
 }
@@ -242,13 +240,25 @@ body {
 	float: right;
 }
 .audio-player p{
-
 	margin: 0px;
+	color: #068CB8;
+	float: right;
+}
+.audio-player a{
+	margin-top: 2em;
+	text-decoration: none;
+	font-weight: bold;
 	color: #068CB8;
 	float: right;
 }
 .audio-player h3{
 	margin: 0px;
+	color: #068CB8;
+	float: right;
+}
+.audio-player a{
+  text-decoration: none;
+	font-weight: bold;
 	color: #068CB8;
 	float: right;
 }
@@ -301,13 +311,6 @@ body {
 .left-nav a:hover {
 	background-color: rgb(237,240,241);
 }
-/* sininen button ostoskorissa */
-.sininen{
-	background-color: #282929;
-}
-.ei-sininen{
-	
-}
 
 .button {
 	border: 0;
@@ -317,9 +320,6 @@ body {
 	padding: 6px 10px;
 	text-decoration: none;
 
-}
-.button:hover{
-	cursor: pointer;
 }
 
 footer {
@@ -349,7 +349,7 @@ footer {
 
 */
 .punainen {
-	background-color: #4A2F2F;
+	background-color: #D16500;
 }
 
 
@@ -395,8 +395,7 @@ footer {
 }
 
 .main-content a{
-	/*en tiedä muuttaako mitään */
-	/*color: #464646;*/
+	color: #464646;
 	text-decoration: none;
 }
 
@@ -419,7 +418,7 @@ footer {
 
 .tuote-nav {
 	width: 100%;
-	/*position: relative;*/
+	position: relative;
 	float: left;
 
 
@@ -430,12 +429,12 @@ footer {
 }
 
 .tuote-nav li {
-	padding: 0 0px;
+	padding: 0 10px;
 	float: left;
 	display: inline-block;
 	width: 10em;
 	text-align: center;
-	/*border-radius: 0.5em 0.5em 0 0;*/
+	border-radius: 0.5em 0.5em 0 0;
 	border-right: #fff 1px solid;
 	border-top: #fff 1px solid;
 	border-left: #fff 1px solid;
@@ -483,18 +482,17 @@ footer {
 
 
 .cart {
-	/*position: relative;*/
+	position: relative;
 	width: 36em;
 	float: right;
-	background-color: rgba(246,250,251,0.95);
-	font-size: 0.9em;
+	color: rgb(236,240,241);
+	font-size: 0.8em;
 	padding: 2em;
-	margin: auto;
-	/*border: #666 1px solid;*/
+	border: #666 1px solid;
 }
 
 .cart a {
-	/*color: rgb(5,8,10);*/
+	color: rgb(236,240,241);
 }
 
 .sCart {
@@ -514,7 +512,6 @@ footer {
 	float: right;
 	text-decoration: none;
 	font-size: 2em;
-	color: rgb(5,8,10);
 	margin-top: -1em;
 }
 
@@ -526,8 +523,8 @@ footer {
 #kori input {
 	float: left;
 	text-align: center;
-	border-radius: 1px;
-	border: 1;
+	border-radius: 6px;
+	border: 0;
 	margin: 4px;
 }
 
@@ -622,40 +619,22 @@ footer {
 	width: 100%;
 	box-shadow: 0 2px 2px #888888;
 }
-/* uutissettiä vähän */
-.kommentit{
-	margin-left: 25px;
-}
+
 .news-section-title{
 	text-align: center;
 }
 
 .comment-link {
-	padding-right: 6px;
-	
-	line-height: 15px;
-	font-size: 1.3em;
 	float: right;
-	color: #000000;
+	color: #282929;
 	text-decoration: none;
 }
-.comment-link:hover{
-	color: #aaaaaa;
-}
+
 .article-title a{
 	color: #000000;
 	text-decoration: none;
-	
-}
-.article-title a:hover{
-	color: #424955;
 }
 
 .pvm {
 	font-size: 0.8em;
-}
-.hinta {
-	line-height: 18px;
-	font-size: 1.4em;
-	color: #485863;
 }
