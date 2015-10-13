@@ -12,7 +12,6 @@
 		<link href='https://fonts.googleapis.com/css?family=Quicksand:400,700' rel='stylesheet' type='text/css'>
 		<link href="<?php echo(SITE_ROOT);?>assets/css/fonts/foundation-icons.css" rel="stylesheet">
 		<link href="<?php echo(SITE_ROOT);?>assets/css/app.css" rel="stylesheet">
-		<link href="<?php echo(SITE_ROOT);?>assets/css/banner.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="<?php echo(SITE_ROOT);?>assets/slick/slick.css">
 	</head>
 
