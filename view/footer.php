@@ -1,6 +1,6 @@
 <footer class = "dark-gray">
 	<p>
-	contact: mrbadger@badger.com
+	Contact: mrbadger@badger.com
 	<?php
 	if ($_SESSION['kirjautunut']){
 		echo('<br> Logged in as ' . $_SESSION['username']);
@@ -9,7 +9,7 @@
 		echo('<br>User level: ');
 		echo($_SESSION['taso'] . ' (Admin)');
 		echo('<br>');
-		echo('<p>' . $_SESSION['email'] . '</p>');
+		echo($_SESSION['email']);
 	}
 	/*print_r($_SESSION['username']);
 	print_r($_SESSION['taso']);
