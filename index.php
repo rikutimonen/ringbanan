@@ -10,6 +10,7 @@
 
 		//UUTISET
 	if ($_GET['osio'] == uutiset){
+		include("includes/icontainer.php");
 		if (isset($_GET['uutisid']) && empty($_GET['toiminto'])) {
 			include("view/vuutinen.php");
 		}
@@ -24,12 +25,14 @@
 	//MEDIA
 	else if ($_GET['osio'] == mediat) {
 		//include("media.php");
+		include("includes/icontainer.php");
 		include("view/vmedia.php");
 	}
 	
 
 	//MERCHANDISE
 	else if ($_GET['osio'] == merchandise) {
+		include("includes/icontainer.php");
 		include("includes/iproduct.php");
 	}
 
@@ -52,6 +55,7 @@
 
 	//// 	 REKISTERÖINTI 		 /////
 	else if ($_GET['osio'] == register) {
+		include("includes/icontainer.php");
 		require_once('view/vrekisteroi.php');
 	}
 	////  REKISTERÖINNIN VAHVISTUS  /////

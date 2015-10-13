@@ -18,36 +18,30 @@
 <body>
 	<div id="sivu">
 	
-			<header class="main-header dark-gray">
+			<header class="main-header header-gray">
 				<nav class="top-nav">
 					<ul>
-						<li><img="<?php echo(SITE_ROOT);?>assets/img/badger_100x100_trans.png" href="<?php echo(SITE_ROOT);?>"></img></li>
-						<!---<li><a href="<?php echo(SITE_ROOT);?>">HOME</a></li>-->
-						<li><a href="<?php echo(SITE_ROOT);?>mediat">MEDIA</a></li>
-						<li><a href="<?php echo(SITE_ROOT);?>uutiset">NEWS</a></li>
-						<li><a href="<?php echo(SITE_ROOT);?>merchandise">MERCHANDISE</a></li>
-						<li><a href="#" id="cart-button" class="open-modal" data-target="cart-modal">OSTOSKORI</a></li>
+						<li class="mrbadger_li"><a href="<?php echo(SITE_ROOT);?>"><li class="logon_li_tai_jtn"><img src="<?php echo(SITE_ROOT);?>assets/img/badger_70x70_trans.png"></li><li class="mrbadger_li">Mr. Badger</a></li></li>
+						<!---<li><a href="<?php echo(SITE_ROOT);?>">HOME</a></li>--->
+						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>mediat">MEDIA</a></li>
+						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>uutiset">NEWS</a></li>
+						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>merchandise">MERCHANDISE</a></li>
+						<li class="normal_li"><a href="#" id="cart-button" class="open-modal" data-target="cart-modal">OSTOSKORI</a></li>
 						
 						<?php if($_SESSION['kirjautunut']){
-						echo('<li><a href="'.SITE_ROOT.'logout">LOG OUT</a></li>');
+						echo('<li class="logout_css"><a href="'.SITE_ROOT.'logout">LOG OUT</a></li>');
 
 						}
 						else{
 							echo('
-							<li><a href="#" id="check" class="open-modal" data-target="log-modal">login<i class="fi-check large"></i><i class="fi-torso large"></i></a></li>');
+							<li class="logoli"><a href="#" id="check" class="open-modal" data-target="log-modal">LOG IN</a></li>');
 						}?>
 					</ul>
 				</nav>
 				<div class="cart" id="cart-modal" style="opacity: 0; display: none;">
-					<a href="#" class="close-modal">x</a>
-					<div id="kori">
-						Cart        
-					</div>
-					<div id="checkout">
-						<a href="<?php echo(SITE_ROOT."kassa");?>" class="sininen button">Checkout</a>
-					</div>
-				<div id="empty-cart">
-					<a href="#" class="punainen button">Empty Cart</a>
+					<href="#" class="close-modal">x</a>
+					<?php include("includes/iostoskori.php"); ?>
+				</div>
 				
 				
 				
@@ -57,4 +51,4 @@
 					
 				</div>
 			</header>
-		<div id="kokosivu_cont">
+		
