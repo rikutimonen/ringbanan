@@ -1,11 +1,13 @@
 <?php
+session_start();
 
 	require_once ("config/config.php");
 
  	$first_name = $_SESSION['enimi'];
-    $last_name = $_POST['snimi'];
-    $email_from = $_POST['email']; 
- 	$telephone = $_POST['puhelinro'];
+    $last_name = $_SESSION['snimi'];
+    $email_from = $_SESSION['email']; 
+ 	$telephone = $_SESSION['puhnro'];
+    $comments = $_SESSION['cart'];
 
     function clean_string($string) {
  
@@ -15,15 +17,17 @@
  
     }
 
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
+    $email_message = "First Name: ".clean_string($first_name)."\n";
     $email_message .= "Last Name: ".clean_string($last_name)."\n";
     $email_message .= "Email: ".clean_string($email_from)."\n";
     $email_message .= "Telephone: ".clean_string($telephone)."\n";
-    $email_message .= "Comments: ".clean_string($comments)."\n";
+    $email_message .= "Order: ".clean_string($comments)."\n";
+
+    
 
  	
  	$email_from = $_SESSION['email'];
-    $email_message = $_SESSION['email'] . $_SESSION['cart'];
+    //$email_message .= $_SESSION['email'] . $_SESSION['cart'];
     $email_to = "mrbadgerofficial@gmail.com";
  
     $email_subject = "Uusi tilaus";

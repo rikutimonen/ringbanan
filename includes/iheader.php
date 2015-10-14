@@ -22,7 +22,7 @@
 				<nav class="top-nav">
 					<ul>
 						<li class="mrbadger_li"><a href="<?php echo(SITE_ROOT);?>"><li class="logon_li_tai_jtn"><img src="<?php echo(SITE_ROOT);?>assets/img/badger_70x70_trans.png"></li><li class="mrbadger_li">Mr. Badger</a></li></li>
-						<!---<li><a href="<?php echo(SITE_ROOT);?>">HOME</a></li>--->
+						<!---<li><a href="<?php echo(SITE_ROOT);?>">HOME</a></li>-->
 						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>mediat">MEDIA</a></li>
 						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>uutiset">NEWS</a></li>
 						<li class="normal_li"><a href="<?php echo(SITE_ROOT);?>merchandise">MERCHANDISE</a></li>
@@ -44,12 +44,18 @@
 					<div id="kori">
 						Cart        
 					</div>
+
+					<?php if(!empty($_SESSION['cart'])) { ?>
 					<div id="checkout">
 						<a href="<?php echo(SITE_ROOT."kassa");?>" class="sininen button">Checkout</a>
 					</div>
 				<div id="empty-cart">
 					<a href="#" class="punainen button">Empty Cart</a>
 				</div>
+				<?php } else { ?>
+					Your cart is empty!
+					<?php } ?>
+
 				</div>
 				
 				

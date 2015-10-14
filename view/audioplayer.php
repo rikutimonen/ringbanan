@@ -2,7 +2,7 @@
 				
 				<button id="pButton" class="play" onclick="fadeIn(); playAudio();"></button>
 				<audio id="music">
-					<source src="preview.mp3" type="audio/mpeg" />		
+					<source src="piano.mp3" type="audio/mpeg" />		
 				</audio>	
 				<div id="info-slide">
 					<br>
@@ -17,8 +17,7 @@
 					var button = document.getElementById('pButton');
 					var place = 0;
 					var buttonPlace = 35;
-					
-					
+
 					function playAudio() {
 						if (music.paused) {
 							music.play();
@@ -29,10 +28,6 @@
 							pButton.className = "";
 							pButton.className = "play";
 						}
-					}
-					music.onended = function(){
-							pButton.style.opacity = 0;
-							document.getElementById('info-slide').innerHTML = "<?php echo("<a href='")?><?php echo(SITE_ROOT)?><?php echo("mediat'>More at Media-section</a>")?>";
 					}
 					
 					var fadeIn = function() {

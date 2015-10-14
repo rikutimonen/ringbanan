@@ -8,7 +8,7 @@ if ($_SESSION['taso']<3) {
 ?>
    <div>
       <p><a href="<?php echo(SITE_ROOT)?>uutiset"><-- Palaa uutisiin</a></p>
-      <h3 class="ei-sininen">Luo uusi artikkeli</h3>
+      <h3 class="sininen">Luo uusi artikkeli</h3>
       <form action="<?php echo(SITE_ROOT)?>model/mnewsAddArticle.php" class="uutisen-luonti" method="post" id="create-article-form-<?php echo($uutinen->uutisID);?>">
          <textarea rows="2" cols="100" name="otsikko" placeholder="Otsikko" form="create-article-form-<?php echo($uutinen->uutisID);?>" required></textarea>
          <br>

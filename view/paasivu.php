@@ -7,7 +7,7 @@
 							include("model/mnews.php");
 							foreach(array_reverse($uutiset) as $uutinen){
 					         $i++;
-					         if ($i>5) {
+					         if ($i>3) {
 					            break;
 					         } else {
 					      ?>

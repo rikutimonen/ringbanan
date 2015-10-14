@@ -18,7 +18,7 @@
       if(isset($_GET['show'])) {
          $limit=$_GET['show'];
       } else {
-         $limit=5;
+         $limit=10;
       }
       foreach(array_reverse($uutiset) as $uutinen){
          $i++;

@@ -23,7 +23,7 @@
          <button type="button" name="button" class="button toggle-hidden orange" data-target="artikkeli-muokkaus">Muokkaa</button>
          <hr>
          <div id="artikkeli-muokkaus" style="display: none;">
-            <h3 class="ei-sininen">Muokkaa artikkelia</h3>
+            <h3 class="sininen">Muokkaa artikkelia</h3>
             <form action="<?php echo(SITE_ROOT)?>model/mnewsModifyArticle.php?uutisid=<?php echo($uutinen->uutisID);?>" class="uutisen-muokkaus" method="post" id="modify-article-form-<?php echo($uutinen->uutisID);?>">
                <textarea rows="2" cols="100" name="otsikko" placeholder="Otsikko" form="modify-article-form-<?php echo($uutinen->uutisID);?>" required><?php echo($uutinen->otsikko);?></textarea>
                <br>
@@ -38,7 +38,7 @@
       ?>
 
       <section class="kommentit">
-         <h3 class="ei-sininen">Comments</h3>
+         <h3 class="sininen">Comments</h3>
          <?php
          if(empty($uutiskommentit)) {
          ?>
@@ -88,7 +88,7 @@
          }
          ?>
 
-         <a name=comment><h3 class="ei-sininen">Comment</h3></a>
+         <a name=comment><h3 class="sininen">Comment</h3></a>
 
          <?php
          if($_SESSION['taso']>1) {
