@@ -15,8 +15,12 @@ article {
 	max-width: 700px;
 	margin: 0 auto 50px auto;
 }
+article p {
+	margin: 0px 10px 0px 15px;
+}
 article img{
 	max-width: 700px;
+	margin: 0px 0px 0px 20px;
 }
 /* sivu ilman headeria padding toppiin*/
 #kokosivu_cont {
