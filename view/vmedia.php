@@ -41,10 +41,10 @@
  ?>
    <div>
       <h3 class="sininen">Add new image</h3>
-        <form method="post" action="<?php echo(SITE_ROOT)?>model/mmediaAddImage.php" enctype="multipart/form-data">
+         <form method="post" action="<?php echo(SITE_ROOT)?>model/mmediaAddImage.php" enctype="multipart/form-data">
 			<textarea rows="2" cols="100" name="otsikko" placeholder="Otsikko" required></textarea>
-			 <br>
-			 <textarea rows="16" cols="100" name="kuvaus" placeholder="Kirjoita tähän" required></textarea>
+			<br>
+			<textarea rows="2" cols="100" name="kuvaus" placeholder="Kuvaus" required></textarea>
             <p>
               Image:
             </p>
