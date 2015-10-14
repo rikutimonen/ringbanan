@@ -49,14 +49,15 @@
                </article>
             </section>
             <hr><br>
-         <?php
+      <?php
          }
       }
-      if(sizeof($uutiset)>$limit) {
       ?>
-         <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&show=<?php echo($limit+10);?>#showmore">Displaying up to <?php echo($limit);?> articles. Show more:</a>
-      <?php
-      }
-      ?>
+      <a name="showmore" href="<?php echo(SITE_ROOT)?>index.php?osio=uutiset&show=<?php echo($limit+10);?>#showmore">
+      <?php if(sizeof($uutiset)>$limit) {?>
+         Displaying up to <?php echo($limit);?> articles. Show more:
+      <?php }?>
+      </a>
+
    </section>
 </div>
