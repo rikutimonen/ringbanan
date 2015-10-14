@@ -3,6 +3,10 @@
 	require_once ("config/config.php");
 	require_once("functions/functions.php");
 	session_set_cookie_params ( 0, SITE_ROOT ); // Cookie voimassa kunnes selain suljetaan
+
+	//Tämä korjaa htaccesin rikkoamat jutskat, jos lisää ennen jokaista session_startia.
+	//Vaihtoehtoisesti htaccesin addhandler-rivi veks
+	//session_save_path("/home1-3/k/kaif/public_html/ringbanan"); <---------------------------
 	session_start();
 
 	//Navigaatio, joka näkyy jokaisella sivulla

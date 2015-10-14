@@ -5,7 +5,7 @@
 			<div class="banner-carousel">
 						
 						<div>
-							<a href="media.html"><img src ="assets/img/music.jpg" alt="Banneri"></a>
+							<a href="mediat"><img src ="assets/img/music.jpg" alt="Banneri"></a>
 						</div>
 						
 						<div>
@@ -13,7 +13,7 @@
 						</div>
 						
 						<div>
-							<a href="media.html"><img src ="assets/img/music.jpg" alt="Banneri"></a>
+							<a href="uutiset"><img src ="assets/img/music.jpg" alt="Banneri"></a>
 						</div>
 						
 						<div>

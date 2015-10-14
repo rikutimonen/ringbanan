@@ -4,24 +4,33 @@
 session_set_cookie_params(0, SITE_ROOT);
 session_start();
 
+if (isset($_FILES['upload'])){
+	$allowed = array ('image/pjpeg', 'image/jpeg', 'image/JPG', 'image/X-PNG', 'image/PNG', 'image/png', 'image/x-png');
+	if(in_array($_FILES['upload']['type'], $allowed)) {
+			if(move_uploaded_file($_FILES['upload']['tmp_name'], "../assets/img/gallery/{$_FILES['upload']['name']}")){
+				echo "<p><em>The file has been uploaded! </em></p>";
+			}
+	$image="{$_FILES['upload']['name']}";
+	}
+}
 
-//This is the directory where images will be saved
-$target = "../model/img/gallery/";
-$target = $target . basename( $_FILES['photo']['name']);
-//This gets all the other information from the form
-
-//Writes the information to the database
 try{
 	$STH = $DBH->prepare("INSERT INTO 0mrb_kuvat (otsikko, kuvaus, pvm, kuva, thumbnail) VALUES (:otsikko, :kuvaus, now(), :pic, :thumbnail)");
 	$STH->bindParam(':otsikko', $_POST['otsikko']);
 	$STH->bindParam(':kuvaus', $_POST['kuvaus']);
-	$STH->bindParam(':pic', basename($_FILES['photo']['name']));
-	$STH->bindParam(':thumbnail', basename($_FILES['photo']['name']));
+	$STH->bindParam(':pic', $image);
+	$STH->bindParam(':thumbnail', $image);
 	$STH->execute();
 } catch(PDOException $e) {
     file_put_contents('../log/DBErrors.txt', 'mmediaAddImage.php: ' . $e->getMessage() . "\n", FILE_APPEND);
 }
 
+//if (isset($_FILES['upload'])){
+echo ($_POST['otsikko']);
+echo ($_POST['kuvaus']);
+echo ($_FILES['upload']['name']);
+
+/*
 //Writes the photo to the server
 if(move_uploaded_file($_FILES['photo']['tmp_name'], $target))
 {
@@ -33,7 +42,7 @@ else {
 
 //Gives and error if its not
 echo "Sorry, there was a problem uploading your file.";
-}
+}*/
 ?>
 <?php
 /*
