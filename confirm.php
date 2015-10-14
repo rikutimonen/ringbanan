@@ -1,5 +1,5 @@
 <div class="tuotesivu">
-      <h2 class="sininen">Do you want to order these products?</h2>
+      <h2>Do you want to order these products?</h2>
       <?php //Päivitä kori
             require_once('model/mupdateCart.php');
             //Näytä kori

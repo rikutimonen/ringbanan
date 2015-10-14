@@ -8,7 +8,7 @@ var cart_buttons = document.getElementsByClassName('koriin');
 // XHR objekti sivun osien päivitystä varten
 var xhr = new XMLHttpRequest();
 
-var SITE_ROOT = '/~rainekuo/web-perusteet/ringbanan/';
+var SITE_ROOT = '/~rikuti/github/ringbanan/';
 
   // pageready
 (function(funcName, baseObj) {
@@ -271,6 +271,8 @@ for (var i = 0; i < cart_buttons.length; i++){
     cart_buttons[i].addEventListener('click', function(evt){
         evt.preventDefault();
         addToCart(this.getAttribute('data-tid'));
+		//change cart alpha value
+		var cart_li = document.getElementById('korin_li').style.backgroundColor = "rgba(30, 31, 33, 1)";
     });
 }
 //3.b) ****** Eventhandler korin tyhjentämistä varten 23.9.
@@ -278,6 +280,8 @@ for (var i = 0; i < cart_buttons.length; i++){
 document.getElementById('empty-cart').addEventListener('click', function(evt){
     evt.preventDefault();
     emptyCart();
+	//change cart alpha value
+	var cart_li = document.getElementById('korin_li').style.backgroundColor = "rgba(30, 31, 33, 1)";
 });
 
 //3.c) ****** päivitetään ostosten lkm sivua ladattaessa uudelleen 23.9
