@@ -34,7 +34,7 @@ if(!$user){
 	print_r($_SESSION);
 	print_r("useri?");
 	//Jos loggaus onnistuu niin palataan paasivulle
-	redirect(SITE_ROOT);
+	redirect($_SERVER['HTTP_REFERER']);
 }
 
 
