@@ -1,5 +1,3 @@
-<?php session_start();?>
-
 <div class="tuotesivu">
       <h2 class="sininen">Do you want to order these products?</h2>
       <?php //Päivitä kori
@@ -25,7 +23,7 @@
 ?>
 	<div class="orderbuttons">
           <a href="javascript:window.history.back();" class="button punainen">&larr; Back</a>
-          <a href="tilaa" class="button punainen" id="tilaa"> Order &rarr;</a>
+          <a href="tilaa" class="button punainen" id_"tilaa"> Order &rarr;</a>
       </div>
 <?php } else {
 	include("includes/ilog_sign.php");

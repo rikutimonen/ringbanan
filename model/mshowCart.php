@@ -21,7 +21,7 @@ if(isset($_SESSION['cart'])){
 		$yht += $lkm*$tuote->tHinta;
 	}
 	echo '<span>SUM: '.$yht.'€</span>';
-	echo '<input type="submit" value="refresh" class="sininen button" id="refresh">';
+	echo '<input type="submit" value="refresh" class="sininen button">';
 } else {
 	echo 'Your cart is empty';
 }
