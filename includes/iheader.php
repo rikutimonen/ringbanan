@@ -29,7 +29,7 @@
 						
 						
 						<?php if($_SESSION['kirjautunut']){
-						echo('<li class="normal_li"><a href="#" id="cart-button" class="open-modal" data-target="cart-modal">CART</a></li>');
+						echo('<li class="normal_li" id="korin_li"><a href="#" id="cart-button" class="open-modal" data-target="cart-modal">CART</a></li>');
 						echo('<li class="logout_css"><a href="'.SITE_ROOT.'logout">LOG OUT</a></li>');
 
 						}

@@ -86,9 +86,11 @@ var SITE_ROOT = '/~rainekuo/web-perusteet/ringbanan/';
 ///////////////////////////////////////
 docReady(function() {
 
+
 //fadeout/in
 var open_modals = document.getElementsByClassName('open-modal');
 var close_modals = document.getElementsByClassName('close-modal');
+
 var open_modal = null;
 
 console.log("open_modals määrä on " + open_modals.length);
@@ -252,6 +254,7 @@ var addToCart = function(id){
         }
     }
     xhr.send();
+	
 }
 
 var emptyCart = function(){
@@ -271,6 +274,7 @@ for (var i = 0; i < cart_buttons.length; i++){
     cart_buttons[i].addEventListener('click', function(evt){
         evt.preventDefault();
         addToCart(this.getAttribute('data-tid'));
+		var cart_li = document.getElementById('korin_li').style.backgroundColor = "rgba(30, 31, 33, 1)";
     });
 }
 //3.b) ****** Eventhandler korin tyhjentämistä varten 23.9.
@@ -278,6 +282,7 @@ for (var i = 0; i < cart_buttons.length; i++){
 document.getElementById('empty-cart').addEventListener('click', function(evt){
     evt.preventDefault();
     emptyCart();
+	var cart_li = document.getElementById('korin_li').style.backgroundColor = "rgba(30, 31, 33, 0)";
 });
 
 //3.c) ****** päivitetään ostosten lkm sivua ladattaessa uudelleen 23.9
