@@ -1,6 +1,8 @@
 <IfModule mod_rewrite.c>
    RewriteEngine On
-   RewriteRule ^([a-zA-Z0-9_-]+)/?$ /~joonaoko/ringbanan/index.php?osio=$1
-   RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ /~joonaoko/ringbanan/index.php?osio=$1&uutisid=$2
-   RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ /~joonaoko/ringbanan/index.php?osio=$1&uutisid=$2&toiminto=$3
+	RewriteRule tilaa /~rainekuo/web-perusteet/ringbanan2/received.php
+	RewriteRule kassa /~rainekuo/web-perusteet/ringbanan2/checkout.php
+   RewriteRule ^([a-zA-Z0-9_-]+)/?$ /~rainekuo/web-perusteet/ringbanan2/index.php?osio=$1
+   RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ /~jrainekuo/web-perusteet/ringbanan2/index.php?osio=$1&uutisid=$2
+   RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ /~rainekuo/web-perusteet/ringbanan2/index.php?osio=$1&uutisid=$2&toiminto=$3
 </IfModule>
