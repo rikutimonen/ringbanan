@@ -1,4 +1,5 @@
 <div class="tuotesivu">
+	<article>
       <h2>Do you want to order these products?</h2>
       <?php //Päivitä kori
             require_once('model/mupdateCart.php');
@@ -29,5 +30,7 @@
 	include("includes/ilog_sign.php");
 
 }?>
+
 </section>
+<article>
 </div>

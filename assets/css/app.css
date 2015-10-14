@@ -11,6 +11,13 @@ body {
 	font-family: 'Quicksand', sans-serif;
 	background-color: #C2C4C0;
 }
+article {
+	max-width: 700px;
+	margin: 0 auto 50px auto;
+}
+article img{
+	max-width: 700px;
+}
 /* sivu ilman headeria padding toppiin*/
 #kokosivu_cont {
 	width: 100%;

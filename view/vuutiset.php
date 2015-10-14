@@ -9,8 +9,10 @@
       <?php
       if($_SESSION['taso']>2) {
       ?>
+		<article>
          <a href="<?php echo(SITE_ROOT)?>uutiset/uusi_artikkeli/luo"><button type="button" name="button" class="button orange">Luo uusi artikkeli</button></a>
-      <?php
+		</article>
+	 <?php
       }
       ?>
 
