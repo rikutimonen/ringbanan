@@ -50,7 +50,7 @@ if (isset($_FILES['kuva'])){
         if (isset($_FILES['kuva'])){
         $allowed = array ('image/pjpeg', 'image/jpeg', 'image/JPG', 'image/X-PNG', 'image/PNG', 'image/png', 'image/x-png');
         if(in_array($_FILES['kuva']['type'], $allowed)) {
-                        if(move_uploaded_file($_FILES['kuva']['tmp_name'], "../assets/img/gallery/{$_FILES['kuva']['name']}")){
+                        if(move_uploaded_file($_FILES['kuva']['tmp_name'], "../assets/img/pikkukuvat/{$_FILES['kuva']['name']}")){
                                 echo "<p><em>The file has been uploaded! </em></p>";
                         }
         $image="{$_FILES['kuva']['name']}";
