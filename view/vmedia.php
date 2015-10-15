@@ -58,7 +58,7 @@
 					
 						<div id='gallery' class='gallery'>
 						  <div id='lg-wrap' class='current-image-wrapper'>
-							<img id='large' data-idx='<?php echo($image->imgID);?>' src='<?php echo(SITE_ROOT)?>assets/img/gallery/<?php echo($images[1]->kuva);?>'>
+							<img id='large' data-idx='<?php echo($image->imgID);?>' src='<?php echo(SITE_ROOT)?>assets/img/gallery/<?php echo($images[0]->kuva);?>'>
 						  </div>
 						  <ul id='thumbnails' class='thumbnails'>
 						     <?php
