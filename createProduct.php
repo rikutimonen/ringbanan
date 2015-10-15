@@ -46,6 +46,12 @@ SSLon();
 </div>
 <div class="row">
   <div class="large-12 columns">
+    <label>ID
+      <input type="int" name="tuoteid" tabindex="5">
+    </label>
+  </div>
+<div class="row">
+  <div class="large-12 columns">
   <label>Kuva
   <input name="kuva" type="file">
   </label>
@@ -53,7 +59,7 @@ SSLon();
 </div>
 <div class="row">
   <div class="large-12 columns">
-  <input name="submit" type="submit" value="Tallenna" class="button" tabindex="5">
+  <input name="submit" type="submit" value="Tallenna" class="button" tabindex="6">
   </div>
 </div>
 </form>

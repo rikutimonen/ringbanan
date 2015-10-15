@@ -11,7 +11,8 @@ include_once('../functions/functions.php');
 if(!empty($_POST['nimi'])){
 
 	try {
-		$STH = $DBH->prepare("INSERT INTO 0mrb_tuotteet (tNimi, tHinta, tKuvaus, katID) VALUES (:nimi, :hinta, :kuvaus, :kategoria)");
+		$STH = $DBH->prepare("INSERT INTO 0mrb_tuotteet (tID, tNimi, tHinta, tKuvaus, katID) VALUES (:tuoteid, :nimi, :hinta, :kuvaus, :kategoria)");
+                $STH->bindParam(':tuoteid', $_POST['tuoteid']);
 		$STH->bindParam(':nimi', $_POST['nimi']);
 		$STH->bindParam(':hinta', $_POST['hinta']);
 		$STH->bindParam(':kuvaus', $_POST['kuvaus']);
@@ -25,6 +26,12 @@ if(!empty($_POST['nimi'])){
 } else {
 	$_SESSION['viesti'] = 'Sivulle tultiin vähän mistä sattuu...';
 }
+
+echo($_POST['tuoteid']);
+echo($_POST['nimi']);
+echo($_POST['hinta']);
+echo($_POST['kuvaus']);
+echo($_POST['kategoria']);
 
 if (isset($_FILES['kuva'])){
         $allowed = array ('image/pjpeg', 'image/jpeg', 'image/JPG', 'image/X-PNG', 'image/PNG', 'image/png', 'image/x-png');
