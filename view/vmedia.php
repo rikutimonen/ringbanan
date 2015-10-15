@@ -40,7 +40,7 @@
      <?php if($_SESSION['taso']>2){ 
  ?>
    <div>
-      <h3 class="sininen">Add new image</h3>
+      <h3>Add new image</h3>
         <form method="post" action="<?php echo(SITE_ROOT)?>model/mmediaAddImage.php" enctype="multipart/form-data">
 			<textarea rows="2" cols="100" name="otsikko" placeholder="Otsikko" required></textarea>
 			 <br>
